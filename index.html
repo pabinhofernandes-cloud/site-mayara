@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipe Morello | Fisioterapia Domiciliar em Cascavel - PR</title>
+<meta name="description" content="Fisioterapia domiciliar em Cascavel&#8288;–&#8288;PR para idosos e pessoas em reabilitação pós-AVC. Mayara Morello, CREFITO 223762-F. Consulte a disponibilidade pelo WhatsApp.">
+<meta name="theme-color" content="#22170F">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Equipe Morello | Fisioterapia Domiciliar em Cascavel">
+<meta property="og:description" content="Fisioterapia para idosos e reabilitação pós-AVC no conforto de casa. Agende uma avaliação pelo WhatsApp.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-mob.webp" media="(max-width:760px)">
+<link rel="preload" as="image" href="assets/hero-2200.webp" media="(min-width:761px)">
+
+<!-- Cole aqui o código do Google Analytics / Tag Manager / Meta Pixel -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Equipe Morello - Fisioterapia Domiciliar",
+  "description": "Fisioterapia domiciliar para idosos e reabilitação pós-AVC em Cascavel, Paraná.",
+  "telephone": "+55 45 99852-0799",
+  "areaServed": {"@type": "City", "name": "Cascavel", "containedInPlace": {"@type": "State", "name": "Paraná"}},
+  "address": {"@type": "PostalAddress", "addressLocality": "Cascavel", "addressRegion": "PR", "addressCountry": "BR"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"}],
+  "sameAs": ["https://instagram.com/equipemorello"],
+  "founder": {"@type": "Person", "name": "Mayara Morello", "jobTitle": "Fisioterapeuta"}
+}
+</script>
+
+<style>
+:root{
+  --cafe:#22170F;
+  --cacau:#2E2017;
+  --ouro:#C39C73;
+  --ouro-claro:#E2C29C;
+  --ouro-escuro:#8A6239;
+  --creme:#F5E9D9;
+  --areia:#ECD9C6;
+  --terracota:#B56632;
+  --texto:#3B2A1E;
+  --texto-suave:#6B5444;
+  --wa:#25D366;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter:clamp(20px, 5vw, 64px);
+  --max:1240px;
+  --sec:clamp(80px, 11vw, 150px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cafe);color:var(--creme);font-family:var(--sans);font-size:clamp(17px,1.15vw,18.5px);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:350;line-height:1.06;margin:0;letter-spacing:-.015em;font-variation-settings:"opsz" 120}
+p{margin:0}
+.ouro{color:var(--ouro)}
+.claro .ouro{color:var(--ouro-escuro)}
+em.it{font-style:italic;font-weight:300}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);width:100%}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px;border-radius:4px}
+
+/* ---------- botões ---------- */
+.btn{display:inline-flex;align-items:center;gap:.7em;font-family:var(--sans);font-weight:600;font-size:1rem;letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;padding:1.05em 1.7em;border-radius:999px;transition:background-color .2s, transform .2s;line-height:1.2}
+.btn svg{width:1.3em;height:1.3em;flex:none}
+.btn-ouro{background:var(--ouro);color:var(--cafe);box-shadow:0 10px 30px -12px rgba(195,156,115,.7)}
+.btn-ouro:hover{background:var(--ouro-claro);transform:translateY(-1px)}
+.btn-cafe{background:var(--cafe);color:var(--creme)}
+.btn-cafe:hover{background:#3A2912;transform:translateY(-1px)}
+.link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.link:hover{color:var(--ouro)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:clamp(32px,4.5vh,44px)}
+.cta .nota{font-size:.92rem;opacity:.75}
+
+/* ---------- topo ---------- */
+.topo{position:fixed;inset:0 0 auto 0;z-index:50;transition:background-color .35s, box-shadow .35s, padding .35s;padding:22px 0}
+.topo.solid{background:rgba(34,23,15,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:12px 0;box-shadow:0 1px 0 rgba(195,156,115,.18)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme)}
+.marca img{width:48px;height:auto}
+.marca span{font-family:var(--serif);font-size:1.3rem;font-weight:400;line-height:1}
+.marca small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;color:var(--ouro-claro);margin-top:5px}
+.menu{display:flex;align-items:center;gap:30px}
+.menu a:not(.btn){color:var(--creme);text-decoration:none;font-size:.95rem;opacity:.85}
+.menu a:not(.btn):hover{opacity:1;color:var(--ouro-claro)}
+.menu .btn{padding:.75em 1.3em;font-size:.92rem}
+@media (max-width:980px){.menu a:not(.btn){display:none}}
+@media (max-width:520px){.marca small{display:none}.menu .btn .full{display:none}}
+@media (min-width:521px){.menu .btn .curto{display:none}}
+
+/* ---------- seções em tela cheia ---------- */
+.tela{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;background:var(--cafe);color:var(--creme);overflow:hidden;isolation:isolate}
+.tela .bg,.tela .bg img{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.tela .bg img{object-fit:cover;object-position:var(--pos,70% 50%)}
+.tela::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg, rgba(25,16,10,.92) 0%, rgba(25,16,10,.78) 30%, rgba(25,16,10,.25) 58%, rgba(25,16,10,0) 78%)}
+.tela .wrap{padding-top:clamp(110px,14vh,150px);padding-bottom:clamp(80px,12vh,130px)}
+.conteudo{max-width:560px}
+.conteudo .h2 + p{margin-top:28px}
+.conteudo > p{max-width:34rem;color:rgba(245,233,217,.86)}
+.conteudo > p + p{margin-top:18px}
+.h2{font-size:clamp(2.4rem,4.8vw,4.4rem)}
+
+/* variante clara (foto com fundo creme) */
+.tela.claro{background:var(--creme);color:var(--texto)}
+.tela.claro::before{background:linear-gradient(90deg, rgba(245,233,217,.94) 0%, rgba(245,233,217,.8) 32%, rgba(245,233,217,.15) 58%, rgba(245,233,217,0) 75%)}
+.tela.claro .conteudo > p{color:var(--texto-suave)}
+
+/* hero */
+.hero{align-items:flex-end}
+.hero::before{background:
+    linear-gradient(90deg, rgba(25,16,10,.92) 0%, rgba(25,16,10,.72) 32%, rgba(25,16,10,.15) 62%, rgba(25,16,10,0) 80%),
+    linear-gradient(0deg, rgba(25,16,10,.75) 0%, rgba(25,16,10,0) 45%)}
+.hero .wrap{padding-bottom:clamp(40px,7vh,90px);padding-top:120px}
+.hero h1{font-size:clamp(2.9rem,min(6.6vw,11vh),6.6rem);font-weight:300;max-width:9.5ch;line-height:.98;letter-spacing:-.025em}
+.hero h1 .ouro{font-style:italic}
+.hero .lead{max-width:34rem;margin-top:28px;font-size:clamp(1.05rem,1.4vw,1.25rem);color:rgba(245,233,217,.9)}
+.hero .cta .link{color:var(--creme)}
+.fatos{display:flex;flex-wrap:wrap;gap:10px 34px;margin:clamp(28px,5vh,48px) 0 0;padding:22px 0 0;border-top:1px solid rgba(195,156,115,.35);list-style:none;font-size:.95rem;color:rgba(245,233,217,.82);max-width:640px}
+.fatos li{display:flex;align-items:center;gap:10px}
+.fatos svg{width:18px;height:18px;color:var(--ouro);flex:none}
+.fio{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.fio path{fill:none;stroke:url(#gradFio);stroke-width:1.4;stroke-linecap:round}
+.fio .brilho{filter:blur(5px);opacity:.55;stroke-width:4}
+@media (prefers-reduced-motion:no-preference){
+  .fio path{stroke-dasharray:3200;stroke-dashoffset:3200;animation:desenha 3.2s cubic-bezier(.6,.05,.25,1) .4s forwards}
+  .hero .entra{opacity:0;transform:translateY(14px);animation:entra 1s ease .2s forwards}
+  .hero .entra.d2{animation-delay:.45s}.hero .entra.d3{animation-delay:.7s}.hero .entra.d4{animation-delay:.95s}
+  .surge{opacity:0;transform:translateY(18px);transition:opacity 1s ease, transform 1s ease}
+  .surge.vis{opacity:1;transform:none}
+}
+@keyframes desenha{to{stroke-dashoffset:0}}
+@keyframes entra{to{opacity:1;transform:none}}
+
+/* listas */
+.lista{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:16px;max-width:34rem}
+.lista li{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;color:rgba(245,233,217,.88)}
+.lista li::before{content:"";width:18px;height:18px;margin-top:5px;border-radius:50%;border:1.5px solid var(--ouro);background:radial-gradient(circle at center,var(--ouro) 0 3px,transparent 3.5px)}
+
+/* pilares (subtítulos em caixa alta serifada, como nas artes) */
+.pilares{margin-top:34px}
+.pilar{padding:22px 0;border-top:1px solid rgba(195,156,115,.3)}
+.pilar:last-child{border-bottom:1px solid rgba(195,156,115,.3)}
+.pilar h3{font-size:clamp(1.3rem,1.9vw,1.55rem);font-variant-caps:all-small-caps;letter-spacing:.07em;color:var(--ouro);font-weight:400}
+.pilar p{margin-top:6px;color:rgba(245,233,217,.84);max-width:30rem}
+
+/* serviços */
+.servicos{display:grid;gap:0;margin-top:30px;max-width:36rem}
+.servico{padding:18px 0;border-top:1px solid rgba(195,156,115,.3)}
+.servico:last-child{border-bottom:1px solid rgba(195,156,115,.3)}
+.servico h3{font-size:clamp(1.3rem,1.8vw,1.5rem);font-weight:400}
+.servico p{margin-top:4px;color:rgba(245,233,217,.8);font-size:.98rem}
+
+/* sobre */
+.assinatura{font-weight:600;color:var(--ouro-claro);margin-top:14px;font-size:1rem}
+.citacao{margin:30px 0 0;padding:0 0 0 22px;border-left:1px solid var(--ouro);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.25rem,1.8vw,1.55rem);line-height:1.4;max-width:30rem}
+
+/* ---------- seções sólidas ---------- */
+.sec{padding:var(--sec) 0;position:relative}
+.cab{max-width:46rem}
+.cab p{margin-top:22px;max-width:36rem;color:rgba(245,233,217,.8)}
+.passos{list-style:none;padding:0;margin:clamp(48px,6vw,80px) 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,60px);position:relative}
+.passos::before{content:"";position:absolute;top:31px;left:32px;right:12%;height:1px;background:linear-gradient(90deg,var(--ouro),rgba(195,156,115,.15))}
+.passo .num{width:64px;height:64px;border-radius:50%;border:1px solid var(--ouro);display:grid;place-items:center;font-family:var(--serif);font-size:1.6rem;color:var(--ouro);background:var(--cafe);position:relative}
+.passo h3{font-size:clamp(1.45rem,2vw,1.75rem);margin-top:28px}
+.passo p{margin-top:12px;color:rgba(245,233,217,.78);max-width:22rem}
+
+/* agendamento */
+.agenda{background:var(--cacau);border-top:1px solid rgba(195,156,115,.15)}
+.agenda-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,100px);align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.campo{display:flex;flex-direction:column;gap:7px}
+.campo.cheio{grid-column:1/-1}
+label{font-size:.9rem;color:rgba(245,233,217,.85)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--creme);background:rgba(245,233,217,.06);border:1px solid rgba(195,156,115,.4);border-radius:6px;padding:.85em 1em;width:100%;transition:border-color .2s, background-color .2s}
+textarea{resize:vertical;min-height:84px}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C39C73' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1em center;padding-right:2.5em}
+select option{color:#22170F}
+input::placeholder,textarea::placeholder{color:rgba(245,233,217,.4)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ouro);background:rgba(245,233,217,.1)}
+form .btn{grid-column:1/-1;justify-content:center;margin-top:8px;font-size:1.05rem}
+.form-nota{grid-column:1/-1;font-size:.85rem;color:rgba(245,233,217,.6);text-align:center}
+.erro{grid-column:1/-1;font-size:.9rem;color:#F0B48A;display:none}
+
+/* faq */
+.faq{background:var(--creme);color:var(--texto)}
+.faq .cab p{color:var(--texto-suave)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,7vw,100px);align-items:start}
+details{border-top:1px solid rgba(138,98,57,.3)}
+details:last-child{border-bottom:1px solid rgba(138,98,57,.3)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font-family:var(--serif);font-size:clamp(1.15rem,1.6vw,1.35rem);font-weight:400;line-height:1.3}
+summary::-webkit-details-marker{display:none}
+summary .mais{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--ouro-escuro);position:relative}
+summary .mais::before,summary .mais::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--ouro-escuro);transform:translate(-50%,-50%)}
+summary .mais::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] summary .mais::after{transform:translate(-50%,-50%) rotate(0)}
+details p{padding:0 50px 24px 0;color:var(--texto-suave);max-width:40rem}
+
+/* rodapé */
+.rodape{background:var(--cafe);color:rgba(245,233,217,.8);padding:clamp(64px,8vw,100px) 0 40px;font-size:.95rem}
+.rodape .grade{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:48px;align-items:start}
+.rodape .logo{width:170px}
+.rodape h3{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--ouro);margin-bottom:14px}
+.rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.rodape a{text-decoration:none}
+.rodape a:hover{color:var(--ouro-claro)}
+.rodape .base{margin-top:56px;padding-top:24px;border-top:1px solid rgba(195,156,115,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.85rem;color:rgba(245,233,217,.55)}
+
+/* whatsapp flutuante (sempre visível) */
+.wa-flutuante{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;text-decoration:none;background:var(--wa);border-radius:999px;padding:14px;box-shadow:0 14px 34px -10px rgba(0,0,0,.5);transition:transform .25s}
+.wa-flutuante svg{width:30px;height:30px;color:#fff}
+.wa-flutuante span{display:none;font-weight:600;color:#fff;padding-right:8px}
+.wa-flutuante:hover{transform:scale(1.05)}
+@media (min-width:861px){.wa-flutuante{padding:14px 20px 14px 16px}.wa-flutuante span{display:inline}}
+
+/* ---------- celular ---------- */
+@media (max-width:860px){
+  .passos{grid-template-columns:1fr;gap:40px}
+  .passos::before{top:32px;bottom:32px;left:32px;right:auto;width:1px;height:auto;background:linear-gradient(180deg,var(--ouro),rgba(195,156,115,.15))}
+  .passo{display:grid;grid-template-columns:64px 1fr;gap:0 24px}
+  .passo h3{margin-top:14px}.passo p{grid-column:2}
+  .agenda-grid,.faq-grid{grid-template-columns:1fr}
+  .rodape .grade{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .tela{display:block;min-height:0}
+  .tela .bg{position:relative;display:block;height:auto;aspect-ratio:9/10;max-height:72svh}
+  .tela .bg img{object-position:50% 30%}
+  .tela::before{bottom:auto;height:min(111.2vw,72svh);z-index:1;
+    background:linear-gradient(0deg, var(--cafe) 0%, rgba(34,23,15,0) 40%), linear-gradient(180deg, rgba(25,16,10,.6) 0%, rgba(25,16,10,0) 22%)}
+  .tela.claro::before{background:linear-gradient(0deg, var(--creme) 0%, rgba(245,233,217,0) 40%), linear-gradient(180deg, rgba(25,16,10,.55) 0%, rgba(25,16,10,0) 22%)}
+  .tela .bg img{z-index:0}
+  .tela .wrap{position:relative;z-index:2;padding-top:0;margin-top:-64px;padding-bottom:72px}
+  .hero .wrap{padding-bottom:56px}
+  .fio{display:none}
+  .hero h1{font-size:clamp(2.7rem,12vw,3.6rem)}
+  .hero .lead{margin-top:20px}
+  .fatos{gap:10px 22px;font-size:.9rem}
+  form{grid-template-columns:1fr}
+  .wa-flutuante{right:16px;bottom:16px}
+}
+
+
+/* ---------- ajustes v3 (plano) ---------- */
+:root{--terra:#A65A28;--terra-hover:#B56632}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 12px 30px -14px rgba(166,90,40,.8)}
+.btn-terra:hover{background:var(--terra-hover);transform:translateY(-1px)}
+.hero .apoio{font-family:var(--serif);font-style:italic;font-weight:300;color:var(--ouro);font-size:clamp(1.2rem,1.8vw,1.55rem);margin-bottom:18px}
+.hero h1{font-size:clamp(2.5rem,min(5vw,8.6vh),5rem);max-width:15ch;line-height:1.02}
+.hero h1 .ouro{font-style:italic}
+.fatos .sep{opacity:.4}
+.nota-discreta{margin-top:22px;font-size:.92rem;color:rgba(245,233,217,.65);max-width:32rem}
+
+/* passos verticais sobre foto */
+.passos-v{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:26px;position:relative;max-width:32rem}
+.passos-v::before{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:1px;background:linear-gradient(180deg,var(--ouro),rgba(195,156,115,.15))}
+.passos-v li{display:grid;grid-template-columns:48px 1fr;gap:0 20px;align-items:start}
+.passos-v .num{width:48px;height:48px;border-radius:50%;border:1px solid var(--ouro);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;color:var(--ouro);background:var(--cafe);position:relative;grid-row:span 2}
+.passos-v h3{font-size:clamp(1.3rem,1.8vw,1.5rem);margin-top:8px}
+.passos-v p{margin-top:6px;color:rgba(245,233,217,.82)}
+
+/* contato (seção clara) */
+.contato{background:var(--areia);color:var(--texto)}
+.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:start}
+.contato .cab p{color:var(--texto-suave)}
+.infos{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.infos li{display:flex;gap:12px;align-items:flex-start}
+.infos svg{width:20px;height:20px;color:var(--ouro-escuro);flex:none;margin-top:3px}
+.form-alt{background:var(--creme);border-radius:8px;padding:clamp(24px,3.5vw,40px);border:1px solid rgba(138,98,57,.2)}
+.form-alt h3{font-size:clamp(1.35rem,1.9vw,1.6rem)}
+.form-alt > p{margin-top:8px;color:var(--texto-suave);font-size:.95rem}
+.form-alt form{margin-top:24px}
+.form-alt label{color:var(--texto)}
+.form-alt input,.form-alt select{color:var(--texto);background:#fff;border-color:rgba(138,98,57,.35)}
+.form-alt input::placeholder{color:#a8968a}
+.form-alt input:focus,.form-alt select:focus{border-color:var(--ouro-escuro);background:#fff}
+.form-alt select{background-repeat:no-repeat;background-position:right 1em center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238A6239' stroke-width='1.5'/%3E%3C/svg%3E")}
+.form-alt .form-nota{color:var(--texto-suave)}
+.form-alt .erro{color:#9B3B12}
+.rodape .privacidade{margin-top:18px;font-size:.85rem;color:rgba(245,233,217,.55);max-width:40rem}
+@media (max-width:860px){.contato-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.rodape{padding-bottom:110px}}
+
+/* ---------- botões de WhatsApp luminosos ---------- */
+.btn.wa,form .btn{position:relative;overflow:hidden;isolation:isolate}
+.btn.wa::after,form .btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;z-index:-1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,236,210,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg)}
+.btn-terra,.btn-cafe.wa{position:relative}
+.wa-flutuante::before,.wa-flutuante::after{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--wa);pointer-events:none;opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  .btn-terra.wa,form .btn-terra{animation:brilho 2.6s ease-in-out infinite}
+  .btn-cafe.wa{animation:brilhoCafe 2.6s ease-in-out infinite}
+  .btn.wa::after,form .btn::after{animation:reflexo 3.6s ease-in-out infinite}
+  .menu .btn.wa::after{animation-delay:1.2s}
+  .wa-flutuante{animation:flutua 3s ease-in-out infinite, brilhoVerde 2.4s ease-in-out infinite}
+  .wa-flutuante::before{animation:onda 2.4s ease-out infinite}
+  .wa-flutuante::after{animation:onda 2.4s ease-out 1.2s infinite}
+  .btn.wa:hover,form .btn:hover{animation-play-state:paused}
+}
+@keyframes brilho{
+  0%,100%{box-shadow:0 0 0 0 rgba(181,102,50,.0),0 10px 28px -12px rgba(166,90,40,.8)}
+  50%{box-shadow:0 0 0 6px rgba(226,194,156,.18),0 0 32px 4px rgba(226,160,100,.55)}
+}
+@keyframes brilhoCafe{
+  0%,100%{box-shadow:0 0 0 0 rgba(34,23,15,0)}
+  50%{box-shadow:0 0 0 6px rgba(166,90,40,.18),0 0 26px 2px rgba(166,90,40,.35)}
+}
+@keyframes reflexo{0%{left:-60%}35%,100%{left:130%}}
+@keyframes brilhoVerde{
+  0%,100%{box-shadow:0 14px 34px -10px rgba(0,0,0,.5),0 0 0 0 rgba(37,211,102,0)}
+  50%{box-shadow:0 14px 34px -10px rgba(0,0,0,.5),0 0 28px 6px rgba(37,211,102,.55)}
+}
+@keyframes onda{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -4px}}
+
+/* ---------- tipografia unificada (v4) ---------- */
+/* títulos: todos no estilo da seção 2 */
+h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:clamp(2.3rem,4.4vw,4.1rem);line-height:1.06;letter-spacing:-.015em}
+.hero h1.h2{font-size:clamp(2.3rem,min(4.4vw,7.6vh),4.1rem);max-width:16ch}
+.h2 .ouro,.hero h1 .ouro{font-style:normal}
+/* texto acima do título */
+.olho{font-family:var(--sans);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ouro);margin:0 0 18px}
+.claro .olho{color:var(--ouro-escuro)}
+/* subtítulos / textos de apoio: estilo da seção final */
+.apoio-txt{font-family:var(--sans);font-size:1rem;line-height:1.6;max-width:34rem;color:rgba(245,233,217,.86);margin-top:24px}
+.claro .apoio-txt,.tela.claro .apoio-txt{color:var(--texto-suave)}
+/* títulos de itens: um único estilo */
+.item-t{font-family:var(--serif);font-weight:400;font-style:normal;font-variant-caps:normal;letter-spacing:0;font-size:clamp(1.3rem,1.8vw,1.5rem);line-height:1.2;color:inherit}
+.assinatura-marca{margin-top:22px;font-family:var(--serif);font-weight:350;font-size:1.15rem;color:var(--ouro)}
+.nome-destaque{font-family:var(--serif);font-weight:350;font-size:clamp(1.8rem,2.8vw,2.4rem);color:var(--ouro);margin-top:26px;line-height:1.1}
+.ident{font-weight:600;font-size:.95rem;color:var(--ouro-claro);margin-top:6px}
+.pequeno{font-size:.9rem;opacity:.75;margin-top:16px}
+
+/* faixa limpa de benefícios (seção 3) */
+.faixa{background:var(--cacau);padding:clamp(56px,7vw,90px) 0}
+.colunas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.coluna{border-top:1px solid rgba(195,156,115,.4);padding-top:22px}
+.coluna p{margin-top:10px;color:rgba(245,233,217,.82)}
+.tela.curta{min-height:78vh;min-height:78svh}
+@media (max-width:860px){.colunas{grid-template-columns:1fr;gap:28px}}
+.faq-cta{margin-top:32px}
+/* (tons marrons) */
+/* rodapé v2 */
+.rodape{position:relative;background:linear-gradient(180deg,#2E2017 0%,#1A110B 100%);border-top:1px solid rgba(195,156,115,.25);padding-top:clamp(72px,9vw,110px)}
+.rodape-fio{position:absolute;top:-1px;left:0;width:100%;height:90px;pointer-events:none;opacity:.9}
+.rodape-topo{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-bottom:clamp(48px,6vw,72px);border-bottom:1px solid rgba(195,156,115,.2);margin-bottom:clamp(40px,5vw,60px)}
+.rodape-topo .logo{width:150px}
+.rodape-frase{font-family:var(--serif);font-weight:350;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ouro)}
+.rodape .grade{grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px}
+.rodape .grade p{max-width:22rem}
+.rodape .grade a:not(.btn){color:rgba(245,233,217,.85)}
+@media (max-width:860px){.rodape .grade{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rodape .grade{grid-template-columns:1fr}}
+
+/* tons marrons nas seções de baixo */
+.contato{background:var(--cacau);color:var(--creme)}
+.contato .apoio-txt{color:rgba(245,233,217,.82)}
+.contato .infos svg{color:var(--ouro)}
+.form-alt{background:rgba(245,233,217,.05);border-color:rgba(195,156,115,.35)}
+.form-alt > p,.form-alt .form-nota{color:rgba(245,233,217,.7)}
+.form-alt label{color:rgba(245,233,217,.88)}
+.form-alt input,.form-alt select{color:var(--creme);background:rgba(245,233,217,.07);border-color:rgba(195,156,115,.45)}
+.form-alt input::placeholder{color:rgba(245,233,217,.45)}
+.form-alt input:focus,.form-alt select:focus{border-color:var(--ouro);background:rgba(245,233,217,.12)}
+.form-alt select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C39C73' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1em center}
+.contato .cab p.olho,.faq .cab p.olho{color:var(--ouro)}
+.contato .cab p.apoio-txt,.faq .cab p.apoio-txt{color:rgba(245,233,217,.82)}
+.form-alt .erro{color:#F0B48A}
+.faq{background:var(--cafe);color:var(--creme)}
+.faq .apoio-txt{color:rgba(245,233,217,.82)}
+.faq details{border-color:rgba(195,156,115,.3)}
+.faq details p{color:rgba(245,233,217,.75)}
+.faq summary .mais{border-color:var(--ouro)}
+.faq summary .mais::before,.faq summary .mais::after{background:var(--ouro)}
+
+/* seção 4: foto com pessoa à esquerda, texto à direita */
+.tela.direita .conteudo{margin-left:auto}
+.tela.direita::before{background:linear-gradient(270deg, rgba(25,16,10,.92) 0%, rgba(25,16,10,.78) 32%, rgba(25,16,10,.25) 58%, rgba(25,16,10,0) 76%)}
+.titulo-equipe{font-size:clamp(3rem,6vw,5.6rem)!important;line-height:1}
+.subtitulo{font-family:var(--serif);font-weight:350;font-size:clamp(1.3rem,2vw,1.8rem);color:var(--creme);margin-top:14px}
+.tela.direita .nome-destaque{margin-top:30px}
+@media (max-width:760px){
+  .tela.direita::before{background:linear-gradient(0deg, var(--cafe) 0%, rgba(34,23,15,0) 40%), linear-gradient(180deg, rgba(25,16,10,.6) 0%, rgba(25,16,10,0) 22%)}
+}
+
+/* seção 3: foto em tela cheia com texto centralizado */
+.tela.centro{justify-content:center;text-align:center}
+.tela.centro::before{background:radial-gradient(ellipse 60% 70% at 50% 50%, rgba(25,16,10,.72) 0%, rgba(25,16,10,.5) 60%, rgba(25,16,10,.35) 100%)}
+.tela.centro .bg img{object-position:50% 50%}
+.tela.centro .conteudo{max-width:min(640px,100%);margin:0 auto}
+.titulo-grande{line-height:1.08}
+.titulo-grande .linha1{display:block;white-space:nowrap;font-size:clamp(1.25rem,2.1vw,2rem)}
+.titulo-grande .linha2{display:block;margin-top:.25em;font-size:clamp(2rem,3.5vw,3.4rem);line-height:1.06}
+.tela.centro .apoio-txt{margin-left:auto;margin-right:auto;max-width:36rem}
+.tela.centro .h2{text-shadow:0 2px 24px rgba(0,0,0,.35)}
+@media (max-width:760px){
+  .tela.centro{display:flex;align-items:center;min-height:100svh}
+  .tela.centro .bg{position:absolute;inset:0;height:100%;max-height:none;aspect-ratio:auto}
+  .tela.centro .bg img{object-position:50% 50%}
+  .tela.centro::before{height:auto;bottom:0;background:rgba(25,16,10,.6)}
+  .tela.centro .wrap{margin-top:0;padding-top:110px;padding-bottom:110px}
+}
+
+.foto-faixa{position:relative;background:var(--cafe)}
+.foto-faixa img{width:100%;height:clamp(380px,82vh,860px);object-fit:cover;object-position:50% 45%}
+.foto-faixa::after{content:"";position:absolute;inset:auto 0 0 0;height:22%;background:linear-gradient(0deg,var(--cacau),rgba(46,32,23,0));pointer-events:none}
+.faixa .conteudo{margin-bottom:clamp(40px,5vw,64px)}
+@media (max-width:760px){.foto-faixa img{height:auto;aspect-ratio:9/10}}
+#t-quem{font-size:clamp(1.9rem,3vw,2.8rem);max-width:20ch}
+#atendimento .servico{padding:14px 0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.6-7 10-3.8-1.4-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+</svg>
+
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Equipe Morello, início">
+      <img src="assets/marca-claro.png" alt="" width="48" height="30">
+      <span>Equipe Morello<small>Fisioterapia domiciliar</small></span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#atendimento">Atendimento</a>
+      <a href="#mayara">Equipe Morello</a>
+      <a href="#contato">Contato</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-terra wa" data-origem="topo" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="full">Consultar pelo WhatsApp</span><span class="curto">WhatsApp</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- 1. ABERTURA -->
+<section class="tela hero" aria-labelledby="t-hero" style="--pos:70% 40%">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/hero-mob.webp">
+    <source srcset="assets/hero-1280.webp 1280w, assets/hero-2200.webp 2200w" sizes="100vw">
+    <img src="assets/hero-2200.webp" alt="Senhora idosa sorrindo, sentada à mesa de casa, com a lembrança de um passeio ao pôr do sol" width="2200" height="1228" fetchpriority="high">
+  </picture>
+  <svg class="fio" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gradFio" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#C39C73" stop-opacity="0"/>
+        <stop offset=".25" stop-color="#C39C73" stop-opacity=".9"/>
+        <stop offset=".7" stop-color="#E2C29C"/>
+        <stop offset="1" stop-color="#C39C73" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path class="brilho" d="M 640 940 C 760 860, 800 700, 900 690 S 1060 760, 1140 560 S 1260 160, 1480 110"/>
+    <path d="M 640 940 C 760 860, 800 700, 900 690 S 1060 760, 1140 560 S 1260 160, 1480 110"/>
+  </svg>
+  <div class="wrap">
+    <p class="olho entra">Fisioterapia domiciliar em Cascavel&#8288;–&#8288;PR</p>
+    <h1 id="t-hero" class="h2 entra">Seu familiar precisa de fisioterapia? <span class="ouro">O cuidado pode começar em casa.</span></h1>
+    <p class="apoio-txt entra d2">Atendimento para idosos e pessoas em reabilitação pós&#8209;AVC, com avaliação individual e um plano de cuidado pensado para suas necessidades, sem deslocamento até uma clínica.</p>
+    <div class="cta entra d3">
+      <a class="btn btn-terra wa" data-origem="hero" data-msg="disponibilidade" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar disponibilidade pelo WhatsApp</a>
+      <a class="link" href="#atendimento">Conhecer o atendimento</a>
+    </div>
+    <ul class="fatos entra d4">
+      <li><svg aria-hidden="true"><use href="#i-escudo"/></svg>Mayara Morello · Fisioterapeuta · CREFITO 223762-F</li>
+      <li><svg aria-hidden="true"><use href="#i-relogio"/></svg>Segunda a sexta, das 9h às 18h</li>
+    </ul>
+    <p class="assinatura-marca entra d4">Cuidado que vai além do corpo.</p>
+  </div>
+</section>
+
+<!-- 2. PARA QUEM É -->
+<section class="tela" id="atendimento" aria-labelledby="t-quem" style="--pos:68% 50%">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/servicos-mob.webp">
+    <source srcset="assets/servicos-1280.webp 1280w, assets/servicos-2200.webp 2200w" sizes="100vw">
+    <img src="assets/servicos-2200.webp" alt="Senhor idoso sorridente, com blusa da Equipe Morello, sentado em uma poltrona na sala de casa" width="2200" height="1228" loading="lazy">
+  </picture>
+  <div class="wrap">
+    <div class="conteudo surge">
+      <p class="olho">Para quem busca cuidado em casa</p>
+      <h2 id="t-quem" class="h2">Fisioterapia para idosos: quando os movimentos do dia a dia <span class="ouro">precisam de mais cuidado.</span></h2>
+      <p class="apoio-txt">Levantar da cadeira, caminhar pela casa ou retomar atividades após um AVC pode trazer desafios para seu familiar. A fisioterapia domiciliar oferece acompanhamento individual, considerando suas necessidades e sua rotina, no conforto de casa.</p>
+      <div class="servicos">
+        <div class="servico">
+          <h3 class="item-t">Fisioterapia para idosos</h3>
+          <p>Atenção à força, ao equilíbrio e à mobilidade, com exercícios orientados conforme a avaliação e as dificuldades nas atividades do dia a dia.</p>
+        </div>
+        <div class="servico">
+          <h3 class="item-t">Reabilitação pós-AVC</h3>
+          <p>Cuidado para trabalhar os movimentos e as atividades da rotina, respeitando a fase de recuperação e as necessidades de cada pessoa.</p>
+        </div>
+        <div class="servico">
+          <h3 class="item-t">Atendimento sem sair de casa</h3>
+          <p>Quando o deslocamento é difícil, o cuidado vai até seu familiar. O atendimento na residência permite considerar o ambiente em que ele vive e os desafios da sua rotina.</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn btn-terra wa" data-origem="para-quem" data-msg="familiar" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar atendimento para meu familiar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. POR QUE EM CASA -->
+<section class="tela centro" id="em-casa" aria-labelledby="t-casa">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/idosa-mob.webp">
+    <source srcset="assets/idosa-1280.webp 1280w, assets/idosa-2200.webp 2200w" sizes="100vw">
+    <img src="assets/idosa-2200.webp" alt="Fisioterapeuta de jaleco segurando com carinho as mãos de uma senhora idosa ao pôr do sol" width="2200" height="1228" loading="lazy">
+  </picture>
+  <div class="wrap">
+    <div class="conteudo surge">
+      <h2 id="t-casa" class="h2 titulo-grande"><span class="linha1">O lar também faz parte do cuidado.</span> <span class="ouro linha2">Menos deslocamentos. Mais atenção à rotina do seu familiar.</span></h2>
+      <p class="apoio-txt">Receber fisioterapia em casa permite que o cuidado considere não apenas os exercícios, mas também o ambiente e as atividades que fazem parte do dia a dia.</p>
+    </div>
+  </div>
+</section>
+<section class="faixa" aria-label="Benefícios do atendimento domiciliar">
+  <div class="wrap">
+    <div class="colunas">
+      <div class="coluna">
+        <h3 class="item-t">Atendimento na residência</h3>
+        <p>Sem precisar organizar o deslocamento até uma clínica para cada sessão.</p>
+      </div>
+      <div class="coluna">
+        <h3 class="item-t">Avaliação no ambiente real</h3>
+        <p>O espaço da casa e as dificuldades da rotina podem ser considerados nas orientações e no planejamento.</p>
+      </div>
+      <div class="coluna">
+        <h3 class="item-t">Cuidado individualizado</h3>
+        <p>As condutas são planejadas conforme a avaliação e ajustadas de acordo com as necessidades identificadas durante o acompanhamento.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-terra wa" data-origem="em-casa" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar atendimento em casa</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. QUEM ATENDE -->
+<section class="tela direita" id="mayara" aria-labelledby="t-mayara" style="--pos:30% 40%">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/equipe-mob.webp">
+    <source srcset="assets/equipe-1280.webp 1280w, assets/equipe-2200.webp 2200w" sizes="100vw">
+    <img src="assets/equipe-2200.webp" alt="Mayara Morello, fisioterapeuta e coordenadora da Equipe Morello, de jaleco branco" width="2200" height="1228" loading="lazy">
+  </picture>
+  <div class="wrap">
+    <div class="conteudo surge">
+      <h2 id="t-mayara" class="h2 titulo-equipe">Equipe <span class="ouro">Morello</span></h2>
+      <p class="subtitulo">Conheça nossa coordenadora</p>
+      <p class="nome-destaque">Mayara Morello</p>
+      <p class="ident">Fisioterapeuta · CREFITO 223762-F</p>
+      <p class="apoio-txt">Mayara Morello realiza atendimento domiciliar para idosos e pessoas em reabilitação pós-AVC em Cascavel&#8288;–&#8288;PR.</p>
+      <p class="apoio-txt" style="margin-top:14px">O primeiro passo é compreender as necessidades de cada pessoa. A avaliação orienta os objetivos e o planejamento de um acompanhamento individual, considerando também sua rotina em casa.</p>
+      <ul class="lista">
+        <li><span>Atendimento para idosos.</span></li>
+        <li><span>Reabilitação pós-AVC.</span></li>
+        <li><span>Visitas domiciliares em Cascavel&#8288;–&#8288;PR.</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-terra wa" data-origem="mayara" data-msg="avaliacao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar com a equipe sobre a avaliação</a>
+        <a class="link" href="https://instagram.com/equipemorello" target="_blank" rel="noopener">Conhecer o perfil da Equipe Morello no Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMO FUNCIONA -->
+<section class="tela" id="como-funciona" aria-labelledby="t-passos" style="--pos:62% 50%">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/cuidado-mob.webp">
+    <source srcset="assets/cuidado-1280.webp 1280w, assets/cuidado-2200.webp 2200w" sizes="100vw">
+    <img src="assets/cuidado-2200.webp" alt="Mão da fisioterapeuta segurando com carinho a mão de uma paciente idosa" width="2200" height="1228" loading="lazy">
+  </picture>
+  <div class="wrap">
+    <div class="conteudo surge">
+      <p class="olho">Começar é simples</p>
+      <h2 id="t-passos" class="h2">Você não precisa ter todas as respostas <span class="ouro">para entrar em contato.</span></h2>
+      <p class="apoio-txt">A conversa inicial é o momento de esclarecer dúvidas, consultar disponibilidade e entender como funciona a avaliação domiciliar.</p>
+      <ol class="passos-v">
+        <li>
+          <span class="num" aria-hidden="true">1</span>
+          <h3 class="item-t">Conte para quem seria o atendimento</h3>
+          <p>Envie uma mensagem pelo WhatsApp e informe o bairro em Cascavel.</p>
+        </li>
+        <li>
+          <span class="num" aria-hidden="true">2</span>
+          <h3 class="item-t">Esclareça dúvidas e consulte horários</h3>
+          <p>Converse com a equipe sobre a primeira avaliação, os valores e a disponibilidade.</p>
+        </li>
+        <li>
+          <span class="num" aria-hidden="true">3</span>
+          <h3 class="item-t">Planeje os próximos passos</h3>
+          <p>Após a avaliação, são discutidos os objetivos e o acompanhamento indicado para as necessidades identificadas.</p>
+        </li>
+      </ol>
+      <div class="cta">
+        <a class="btn btn-terra wa" data-origem="como-funciona" data-msg="disponibilidade" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar disponibilidade para avaliação</a>
+      </div>
+      <p class="pequeno">O agendamento é confirmado durante a conversa com a equipe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. LOCAL E CONTATO -->
+<section class="sec contato" id="contato" aria-labelledby="t-contato">
+  <div class="wrap contato-grid">
+    <div class="cab">
+      <p class="olho">Atendimento em Cascavel&#8288;–&#8288;PR</p>
+      <h2 id="t-contato" class="h2">Descubra se há disponibilidade <span class="ouro">para atender seu familiar.</span></h2>
+      <p class="apoio-txt">Informe seu bairro e para quem seria o atendimento. A equipe poderá esclarecer dúvidas e apresentar os horários disponíveis para uma avaliação domiciliar.</p>
+      <ul class="infos">
+        <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Atendimento exclusivamente em Cascavel.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-relogio"/></svg><span>Segunda a sexta, das 9h às 18h.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp: (45) 99852-0799.</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-terra wa" data-origem="contato" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="form-alt">
+      <h3 class="item-t">Prepare sua mensagem para a equipe.</h3>
+      <p>Preencha as informações abaixo e continue no WhatsApp.</p>
+      <form id="form-agenda" novalidate>
+        <div class="campo">
+          <label for="f-nome">Seu nome *</label>
+          <input id="f-nome" name="nome" autocomplete="name" required placeholder="Ex.: Ana">
+        </div>
+        <div class="campo">
+          <label for="f-bairro">Bairro em Cascavel *</label>
+          <input id="f-bairro" name="bairro" required placeholder="Ex.: Centro">
+        </div>
+        <div class="campo cheio">
+          <label for="f-para">Para quem seria o atendimento?</label>
+          <select id="f-para" name="para">
+            <option>Para meu pai ou minha mãe</option>
+            <option>Para outro familiar</option>
+            <option>Para mim</option>
+          </select>
+        </div>
+        <div class="campo cheio">
+          <label for="f-turno">Preferência de horário (opcional)</label>
+          <select id="f-turno" name="turno">
+            <option value="">Sem preferência</option>
+            <option>Manhã (9h às 12h)</option>
+            <option>Tarde (13h às 18h)</option>
+          </select>
+        </div>
+        <p class="erro" id="f-erro" role="alert">Preencha seu nome e o bairro para continuar.</p>
+        <button class="btn btn-terra" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Continuar no WhatsApp</button>
+        <p class="form-nota">O formulário prepara uma mensagem. Você ainda precisa enviá-la pelo WhatsApp; o agendamento depende de confirmação da equipe.</p>
+        <p class="form-nota">As informações não ficam salvas pelo formulário no site. Evite incluir diagnósticos, exames ou outros dados de saúde neste primeiro contato.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CHAMADA FINAL -->
+<section class="tela" aria-labelledby="t-final" style="--pos:70% 40%">
+  <picture class="bg">
+    <source media="(max-width:760px)" srcset="assets/final-mob.webp">
+    <source srcset="assets/final-1280.webp 1280w, assets/final-2200.webp 2200w" sizes="100vw">
+    <img src="assets/final-2200.webp" alt="Mayara Morello sentada em uma poltrona, em ambiente acolhedor" width="2200" height="1228" loading="lazy">
+  </picture>
+  <div class="wrap">
+    <div class="conteudo surge">
+      <p class="olho">O primeiro passo é uma conversa</p>
+      <h2 id="t-final" class="h2">Vamos conversar sobre o cuidado <span class="ouro">de quem você ama.</span></h2>
+      <p class="apoio-txt">Consulte a disponibilidade para fisioterapia domiciliar em Cascavel e entenda como começar com uma avaliação individual.</p>
+      <div class="cta">
+        <a class="btn btn-terra wa" data-origem="final" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Conversar com a Equipe Morello</a>
+      </div>
+      <p class="pequeno">Segunda a sexta, das 9h às 18h · Atendimento mediante agendamento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. DÚVIDAS -->
+<section class="sec faq" id="duvidas" aria-labelledby="t-faq">
+  <div class="wrap faq-grid">
+    <div class="cab">
+      <p class="olho">Antes do primeiro contato</p>
+      <h2 id="t-faq" class="h2">Informações para decidir <span class="ouro">com mais tranquilidade.</span></h2>
+      <p class="apoio-txt">Veja as principais dúvidas sobre o atendimento. Para consultar valores e disponibilidade, converse com a equipe pelo WhatsApp.</p>
+    </div>
+    <div>
+      <details open>
+        <summary>Onde vocês atendem?<span class="mais" aria-hidden="true"></span></summary>
+        <p>O atendimento é domiciliar e realizado exclusivamente em Cascavel, Paraná. Informe seu bairro para consultar a disponibilidade.</p>
+      </details>
+      <details>
+        <summary>Como funciona a primeira avaliação?<span class="mais" aria-hidden="true"></span></summary>
+        <p>A avaliação acontece na residência e busca compreender as necessidades da pessoa. A partir dela, são discutidos os objetivos e o planejamento do acompanhamento.</p>
+      </details>
+      <details>
+        <summary>Vocês atendem pessoas que tiveram AVC?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Sim. A reabilitação pós-AVC faz parte das áreas de atendimento da Equipe Morello. As condutas são orientadas pela avaliação individual.</p>
+      </details>
+      <details>
+        <summary>Quais são os dias e horários?<span class="mais" aria-hidden="true"></span></summary>
+        <p>De segunda a sexta-feira, das 9h às 18h. As visitas são agendadas conforme a disponibilidade.</p>
+      </details>
+      <details>
+        <summary>Como consultar valores e formas de pagamento?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Entre em contato pelo WhatsApp para receber as informações e esclarecer dúvidas antes de agendar.</p>
+      </details>
+      <details>
+        <summary>Preciso ter equipamentos em casa?<span class="mais" aria-hidden="true"></span></summary>
+        <p>Converse com a equipe antes de providenciar materiais. As orientações sobre o que poderá ser necessário dependem do atendimento indicado.</p>
+      </details>
+      <div class="cta faq-cta">
+        <a class="btn btn-terra wa" data-origem="faq" data-msg="duvida" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Esclarecer uma dúvida pelo WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="rodape">
+  <svg class="rodape-fio" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="gradRod" x1="0" x2="1"><stop offset="0" stop-color="#C39C73" stop-opacity="0"/><stop offset=".5" stop-color="#E2C29C"/><stop offset="1" stop-color="#C39C73" stop-opacity="0"/></linearGradient></defs>
+    <path d="M0 70 C 240 20, 480 110, 720 60 S 1200 20, 1440 70" fill="none" stroke="url(#gradRod)" stroke-width="1.2"/>
+  </svg>
+  <div class="wrap">
+    <div class="rodape-topo">
+      <img class="logo" src="assets/logo-claro.png" alt="Equipe Morello, Fisioterapia Domiciliar" width="406" height="403" loading="lazy">
+      <p class="rodape-frase">Cuidado que vai além do corpo.</p>
+      <a class="btn btn-terra wa" data-origem="rodape-botao" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar pelo WhatsApp</a>
+    </div>
+    <div class="grade">
+      <div>
+        <h3>Equipe Morello</h3>
+        <p>Fisioterapia domiciliar para idosos e pessoas em reabilitação pós-AVC em Cascavel&#8288;–&#8288;PR.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#atendimento">Atendimento</a></li>
+          <li><a href="#mayara">Equipe Morello</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Identificação</h3>
+        <ul>
+          <li>Mayara Morello · Fisioterapeuta</li>
+          <li>CREFITO 223762-F</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato e horários</h3>
+        <ul>
+          <li><a class="wa" data-origem="rodape" data-msg="padrao" href="#">WhatsApp: (45) 99852-0799</a></li>
+          <li><a href="https://instagram.com/equipemorello" target="_blank" rel="noopener">Instagram: @equipemorello</a></li>
+          <li>Segunda a sexta, das 9h às 18h.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="privacidade">Privacidade: este site não armazena os dados digitados no formulário. A mensagem só é enviada quando você a confirma no seu WhatsApp.</p>
+    <div class="base">
+      <span>© <span id="ano">2026</span> Equipe Morello. Todos os direitos reservados.</span>
+      <span>Fisioterapia domiciliar em Cascavel, PR</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flutuante wa" data-origem="flutuante" data-msg="padrao" href="#" aria-label="Conversar no WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Consultar pelo WhatsApp</span>
+</a>
+
+<script>
+(function(){
+  var NUMERO = '5545998520799';
+  var MSGS = {
+    padrao: 'Olá, vim pelo site e gostaria de consultar o atendimento de fisioterapia domiciliar em Cascavel.',
+    disponibilidade: 'Olá, vim pelo site e gostaria de consultar a disponibilidade para uma avaliação domiciliar em Cascavel.',
+    duvida: 'Olá, vim pelo site da Equipe Morello e tenho uma dúvida sobre o atendimento domiciliar.',
+    familiar: 'Olá, vim pelo site e gostaria de conversar sobre o atendimento de fisioterapia domiciliar para meu familiar em Cascavel.',
+    avaliacao: 'Olá, vim pelo site e gostaria de saber como funciona a avaliação domiciliar com a Mayara Morello.'
+  };
+  function link(t){ return 'https://wa.me/' + NUMERO + '?text=' + encodeURIComponent(t); }
+
+  // Rastreamento pronto para Google Analytics / Tag Manager / Meta Pixel
+  function rastrear(origem){
+    try{
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event:'whatsapp_click', origem:origem});
+      if (typeof window.gtag === 'function') window.gtag('event','whatsapp_click',{origem:origem});
+      if (typeof window.fbq === 'function') window.fbq('track','Contact',{origem:origem});
+    }catch(e){}
+  }
+
+  document.querySelectorAll('a.wa').forEach(function(a){
+    a.href = link(MSGS[a.dataset.msg] || MSGS.padrao);
+    a.target = '_blank'; a.rel = 'noopener';
+    a.addEventListener('click', function(){ rastrear(a.dataset.origem || 'link'); });
+  });
+
+  var form = document.getElementById('form-agenda');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(n){ return (form.elements[n].value || '').trim(); };
+    var erro = document.getElementById('f-erro');
+    if (!v('nome') || !v('bairro')){
+      erro.style.display = 'block';
+      (v('nome') ? form.elements.bairro : form.elements.nome).focus();
+      return;
+    }
+    erro.style.display = 'none';
+    var linhas = [
+      'Olá, vim pelo site e gostaria de consultar o atendimento domiciliar em Cascavel.',
+      '',
+      '*Nome:* ' + v('nome'),
+      '*Bairro:* ' + v('bairro'),
+      '*Atendimento:* ' + v('para')
+    ];
+    if (v('turno')) linhas.push('*Preferência de horário:* ' + v('turno'));
+    rastrear('formulario');
+    window.open(link(linhas.join('\n')), '_blank', 'noopener');
+  });
+
+  var topo = document.getElementById('topo');
+  function aoRolar(){ topo.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', aoRolar, {passive:true}); aoRolar();
+
+  var alvos = document.querySelectorAll('.surge');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('vis'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -12% 0px'});
+    alvos.forEach(function(el){ io.observe(el); });
+  } else { alvos.forEach(function(el){ el.classList.add('vis'); }); }
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
