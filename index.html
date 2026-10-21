@@ -482,9 +482,32 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
 @media (max-width:520px){.marca span{white-space:normal;font-size:1.1rem;line-height:1.05}.marca img{width:40px}.menu .btn{padding:.85em 1.05em;font-size:.875rem}.topo .wrap{gap:12px}}
 @media (max-width:360px){.marca span{display:none}}
 
+
+/* ---------- animações interativas ---------- */
+.progresso{position:fixed;top:0;left:0;right:0;height:3px;z-index:70;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--ouro-escuro),var(--ouro-claro));pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  /* 1. revelação das fotos */
+  html.anim .tela:not(.hero) .bg img,html.anim .fotos-reais img{clip-path:inset(100% 0 0 0);transition:clip-path 1.2s cubic-bezier(.65,0,.25,1)}
+  html.anim .tela.vis-foto .bg img{clip-path:inset(0 0 0 0)}
+  html.anim .fotos-reais.vis li img{clip-path:inset(0 0 0 0)}
+  html.anim .fotos-reais.vis li:nth-child(2) img{transition-delay:.15s}
+  html.anim .fotos-reais.vis li:nth-child(3) img{transition-delay:.3s}
+  /* 3. título palavra por palavra */
+  html.anim .h2:not(#t-hero) .pal{display:inline-block;opacity:0;transform:translateY(.45em);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i) * 55ms)}
+  html.anim .h2.vis:not(#t-hero) .pal{opacity:1;transform:none}
+  /* 5. cards em cascata */
+  html.anim .condicoes li{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;transition-delay:calc(var(--i) * 70ms)}
+  html.anim .condicoes.vis li{opacity:1;transform:none}
+  /* 6. linha do tempo que se preenche */
+  html.anim .passos-v::before{transform:scaleY(0);transform-origin:top;transition:transform 1.6s cubic-bezier(.4,0,.2,1) .2s}
+  html.anim .passos-v.vis::before{transform:scaleY(1)}
+  html.anim .passos-v .num{transition:background-color .5s ease,color .5s ease,box-shadow .5s ease;transition-delay:calc(.3s + var(--i) * .4s)}
+  html.anim .passos-v.vis .num{background:var(--ouro);color:var(--cafe);box-shadow:0 0 0 6px rgba(195,156,115,.18)}
+}
 </style>
 </head>
 <body>
+<div class="progresso" aria-hidden="true"></div>
 <a class="pular" href="#inicio">Pular para o conteúdo</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -943,6 +966,45 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   function aoRolar(){ topo.classList.toggle('solid', window.scrollY > 40); }
   window.addEventListener('scroll', aoRolar, {passive:true}); aoRolar();
 
+
+  // ---------- animações interativas ----------
+  (function(){
+    var reduz = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // 9. barra de progresso
+    var barra = document.querySelector('.progresso');
+    function prog(){ var h = document.documentElement.scrollHeight - innerHeight; barra.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')'; }
+    window.addEventListener('scroll', prog, {passive:true}); window.addEventListener('resize', prog); prog();
+    if (reduz || !('IntersectionObserver' in window)) return;
+    // 3. dividir títulos em palavras
+    function dividir(el){
+      var n = 0;
+      (function andar(no){
+        Array.prototype.slice.call(no.childNodes).forEach(function(c){
+          if (c.nodeType === 3){
+            var frag = document.createDocumentFragment();
+            c.textContent.split(/(\s+)/).forEach(function(p){
+              if (!p) return;
+              if (/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(p)); return; }
+              var sp = document.createElement('span'); sp.className = 'pal'; sp.style.setProperty('--i', n++); sp.textContent = p; frag.appendChild(sp);
+            });
+            no.replaceChild(frag, c);
+          } else if (c.nodeType === 1 && !c.classList.contains('pal')) andar(c);
+        });
+      })(el);
+    }
+    document.querySelectorAll('.h2:not(#t-hero)').forEach(function(h){ h.setAttribute('aria-label', h.textContent.replace(/\s+/g,' ').trim()); dividir(h); });
+    document.querySelectorAll('.condicoes li').forEach(function(li,i){ li.style.setProperty('--i', i); });
+    document.querySelectorAll('.passos-v .num').forEach(function(n,i){ n.style.setProperty('--i', i); });
+    document.documentElement.classList.add('anim');
+    var obs = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if (!en.isIntersecting) return;
+        en.target.classList.add(en.target.classList.contains('tela') ? 'vis-foto' : 'vis');
+        obs.unobserve(en.target);
+      });
+    }, {rootMargin:'0px 0px -15% 0px', threshold:0.05});
+    document.querySelectorAll('.tela:not(.hero), .fotos-reais, .h2:not(#t-hero), .condicoes, .passos-v').forEach(function(el){ obs.observe(el); });
+  })();
   var alvos = document.querySelectorAll('.surge');
   if ('IntersectionObserver' in window){
     var io = new IntersectionObserver(function(es){
