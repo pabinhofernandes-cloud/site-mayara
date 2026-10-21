@@ -508,6 +508,44 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
 .cta .link-insta{display:inline-flex;align-items:center;gap:10px}
 .cta .link-insta svg{width:26px;height:26px;flex:none;color:var(--ouro);transition:transform .2s,color .2s}
 .link-insta:hover svg{color:var(--ouro-claro);transform:scale(1.1)}
+
+/* ---------- convite Instagram ---------- */
+.insta{background:linear-gradient(180deg,var(--cafe) 0%,#2a1c13 100%);overflow:hidden}
+.insta-grid{display:grid;grid-template-columns:1fr auto;gap:clamp(40px,7vw,110px);align-items:center}
+.btn-insta{background:linear-gradient(45deg,#F58529,#DD2A7B 45%,#8134AF 75%,#515BD4);color:#fff;box-shadow:0 12px 30px -14px rgba(221,42,123,.8)}
+.btn-insta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.celular-link{position:relative;display:block;text-decoration:none;justify-self:center;margin-right:clamp(0px,4vw,60px)}
+.celular{position:relative;display:block;width:280px;height:570px;border-radius:44px;padding:12px;background:linear-gradient(145deg,#3a2a1f,#140d08);box-shadow:0 0 0 1px rgba(195,156,115,.45),0 40px 80px -30px rgba(0,0,0,.8),0 0 60px -10px rgba(195,156,115,.25);transform:rotate(-4deg);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.celular-link:hover .celular{transform:rotate(0) translateY(-6px)}
+.cel-notch{position:absolute;top:20px;left:50%;width:90px;height:22px;margin-left:-45px;border-radius:12px;background:#0c0806;z-index:3}
+.cel-tela{position:relative;display:flex;flex-direction:column;height:100%;border-radius:34px;overflow:hidden;background:#fff;color:#111;font-family:var(--sans)}
+.ig-topo{display:flex;align-items:center;gap:8px;padding:44px 16px 10px;font-size:.95rem;border-bottom:1px solid #eee}
+.ig-topo svg{width:20px;height:20px;color:#111}
+.ig-perfil{display:flex;flex-direction:column;align-items:center;padding:14px 16px 12px;text-align:center}
+.ig-avatar{width:96px;height:96px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}
+.ig-avatar img{width:100%;height:100%;border-radius:50%;background:var(--cafe);object-fit:contain;padding:10px;border:3px solid #fff}
+.ig-nome{margin-top:8px;font-weight:600;font-size:.95rem}
+.ig-bio{font-size:.75rem;color:#555;margin-top:2px}
+.ig-seguir{margin-top:10px;background:#0095F6;color:#fff;font-weight:600;font-size:.8rem;padding:6px 26px;border-radius:8px}
+.ig-feed{flex:1;overflow:hidden;border-top:1px solid #eee}
+.ig-trilho{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.ig-trilho img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.ig-grande{position:absolute;right:-46px;top:40px;z-index:4;width:92px;height:92px;border-radius:26px;display:grid;place-items:center;background:linear-gradient(45deg,#F58529,#DD2A7B 45%,#8134AF 75%,#515BD4);box-shadow:0 20px 40px -12px rgba(221,42,123,.6);transform:rotate(10deg)}
+.ig-grande svg{width:58px;height:58px;color:#fff}
+@media (prefers-reduced-motion:no-preference){
+  .ig-trilho{animation:feed 22s linear infinite}
+  .ig-grande{animation:igFlutua 4s ease-in-out infinite}
+  .celular-link:hover .ig-trilho{animation-play-state:paused}
+}
+@keyframes feed{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@keyframes igFlutua{0%,100%{transform:rotate(10deg) translateY(0)}50%{transform:rotate(4deg) translateY(-12px)}}
+@media (max-width:860px){
+  .insta-grid{grid-template-columns:1fr}
+  .celular-link{margin:10px auto 0}
+  .celular{width:250px;height:510px}
+  .ig-grande{right:-24px;width:76px;height:76px;border-radius:22px}
+  .ig-grande svg{width:46px;height:46px}
+}
 </style>
 </head>
 <body>
@@ -861,6 +899,36 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
 
 </main>
 
+<!-- 9. INSTAGRAM -->
+<section class="sec insta" id="instagram" aria-labelledby="t-insta">
+  <div class="wrap insta-grid">
+    <div class="cab surge">
+      <p class="olho">Siga a Equipe Morello</p>
+      <h2 id="t-insta" class="h2">Acompanhe nosso dia a dia <span class="ouro">no Instagram.</span></h2>
+      <p class="apoio-txt">Dicas de mobilidade, orientações para a família e momentos reais dos atendimentos em Cascavel&#8288;–&#8288;PR.</p>
+      <div class="cta">
+        <a class="btn btn-insta" href="https://instagram.com/equipemorello" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Seguir @equipemorello</a>
+      </div>
+    </div>
+    <a class="celular-link" href="https://instagram.com/equipemorello" target="_blank" rel="noopener" aria-label="Abrir o perfil @equipemorello no Instagram">
+      <span class="ig-grande" aria-hidden="true"><svg><use href="#i-insta"/></svg></span>
+      <span class="celular" aria-hidden="true">
+        <span class="cel-notch"></span>
+        <span class="cel-tela">
+          <span class="ig-topo"><svg><use href="#i-insta"/></svg><b>equipemorello</b></span>
+          <span class="ig-perfil">
+            <span class="ig-avatar"><img src="assets/logo-claro.png" alt="" width="406" height="403" loading="lazy"></span>
+            <span class="ig-nome">Equipe Morello</span>
+            <span class="ig-bio">Fisioterapia domiciliar<br>Cascavel&#8288;–&#8288;PR</span>
+            <span class="ig-seguir">Seguir</span>
+          </span>
+          <span class="ig-feed"><span class="ig-trilho"><img src="assets/ig-1.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-2.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-3.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-4.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-5.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-6.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-7.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-8.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-9.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-1.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-2.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-3.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-4.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-5.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-6.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-7.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-8.webp" alt="" width="240" height="240" loading="lazy"><img src="assets/ig-9.webp" alt="" width="240" height="240" loading="lazy"></span></span>
+        </span>
+      </span>
+    </a>
+  </div>
+</section>
+
 <footer class="rodape">
   <svg class="rodape-fio" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
     <defs><linearGradient id="gradRod" x1="0" x2="1"><stop offset="0" stop-color="#C39C73" stop-opacity="0"/><stop offset=".5" stop-color="#E2C29C"/><stop offset="1" stop-color="#C39C73" stop-opacity="0"/></linearGradient></defs>
@@ -884,6 +952,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
           <li><a href="#mayara">Equipe Morello</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#instagram">Instagram</a></li>
         </ul>
       </div>
       <div>
