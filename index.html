@@ -7,11 +7,14 @@
 <meta name="description" content="Fisioterapia domiciliar em Cascavel&#8288;–&#8288;PR para idosos e pessoas em reabilitação pós-AVC. Mayara Morello, CREFITO 223762-F. Consulte a disponibilidade pelo WhatsApp.">
 <meta name="theme-color" content="#22170F">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Equipe Morello | Fisioterapia Domiciliar em Cascavel">
 <meta property="og:description" content="Fisioterapia para idosos e reabilitação pós-AVC no conforto de casa. Agende uma avaliação pelo WhatsApp.">
 <meta property="og:image" content="assets/og.jpg">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Equipe Morello">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -416,9 +419,26 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
 @media (max-width:760px){.foto-faixa img{height:auto;aspect-ratio:9/10}}
 #t-quem{font-size:clamp(1.9rem,3vw,2.8rem);max-width:20ch}
 #atendimento .servico{padding:14px 0}
+
+/* ---------- revisão (out/2026) ---------- */
+.pular{position:absolute;left:16px;top:-60px;z-index:100;background:var(--creme);color:var(--cafe);padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none;transition:top .2s}
+.pular:focus{top:16px}
+main:focus{outline:none}
+/* alvos de toque maiores no rodapé e links de texto */
+.rodape ul a{display:inline-block;padding:10px 0;margin:-10px 0}
+.cta .link{display:inline-block;padding:10px 0}
+/* placeholder com mais contraste */
+input::placeholder,textarea::placeholder{color:rgba(245,233,217,.6)}
+.form-alt input::placeholder{color:rgba(245,233,217,.6)}
+input[aria-invalid="true"]{border-color:#F0B48A!important}
+/* escala de texto pequeno unificada (2 tamanhos) */
+.pequeno,.form-nota,.rodape .privacidade,.rodape .base,.nota-discreta,.cta .nota,label{font-size:.875rem}
+.fatos,.menu a:not(.btn),.ident,.rodape,.rodape h3{font-size:.9375rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
+<a class="pular" href="#inicio">Pular para o conteúdo</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z"/></symbol>
@@ -444,7 +464,7 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
   </div>
 </header>
 
-<main id="inicio">
+<main id="inicio" tabindex="-1">
 
 <!-- 1. ABERTURA -->
 <section class="tela hero" aria-labelledby="t-hero" style="--pos:70% 40%">
@@ -615,7 +635,7 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
   </div>
 </section>
 
-<!-- 7. LOCAL E CONTATO -->
+<!-- 6. LOCAL E CONTATO -->
 <section class="sec contato" id="contato" aria-labelledby="t-contato">
   <div class="wrap contato-grid">
     <div class="cab">
@@ -637,11 +657,11 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
       <form id="form-agenda" novalidate>
         <div class="campo">
           <label for="f-nome">Seu nome *</label>
-          <input id="f-nome" name="nome" autocomplete="name" required placeholder="Ex.: Ana">
+          <input id="f-nome" name="nome" autocomplete="name" required aria-describedby="f-erro" placeholder="Ex.: Ana">
         </div>
         <div class="campo">
           <label for="f-bairro">Bairro em Cascavel *</label>
-          <input id="f-bairro" name="bairro" required placeholder="Ex.: Centro">
+          <input id="f-bairro" name="bairro" autocomplete="address-level3" required aria-describedby="f-erro" placeholder="Ex.: Centro">
         </div>
         <div class="campo cheio">
           <label for="f-para">Para quem seria o atendimento?</label>
@@ -668,7 +688,7 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
   </div>
 </section>
 
-<!-- 9. CHAMADA FINAL -->
+<!-- 7. CHAMADA FINAL -->
 <section class="tela" aria-labelledby="t-final" style="--pos:70% 40%">
   <picture class="bg">
     <source media="(max-width:760px)" srcset="assets/final-mob.webp">
@@ -776,7 +796,7 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
     <p class="privacidade">Privacidade: este site não armazena os dados digitados no formulário. A mensagem só é enviada quando você a confirma no seu WhatsApp.</p>
     <div class="base">
       <span>© <span id="ano">2026</span> Equipe Morello. Todos os direitos reservados.</span>
-      <span>Fisioterapia domiciliar em Cascavel, PR</span>
+      <span>Fisioterapia domiciliar em Cascavel&#8288;–&#8288;PR</span>
     </div>
   </div>
 </footer>
@@ -818,6 +838,8 @@ h1.h2,.h2{font-family:var(--serif);font-weight:350;font-style:normal;font-size:c
     e.preventDefault();
     var v = function(n){ return (form.elements[n].value || '').trim(); };
     var erro = document.getElementById('f-erro');
+    form.elements.nome.setAttribute('aria-invalid', v('nome') ? 'false' : 'true');
+    form.elements.bairro.setAttribute('aria-invalid', v('bairro') ? 'false' : 'true');
     if (!v('nome') || !v('bairro')){
       erro.style.display = 'block';
       (v('nome') ? form.elements.bairro : form.elements.nome).focus();
