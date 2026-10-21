@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://site-mayara-mu.vercel.app/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="670">
-<meta property="og:image:alt" content="Senhora idosa sorrindo em casa, com a lembrança de um passeio ao pôr do sol">
+<meta property="og:image:alt" content="Mayara Morello abraçada a uma paciente idosa em casa">
 <meta property="og:url" content="https://site-mayara-mu.vercel.app/">
 <link rel="canonical" href="https://site-mayara-mu.vercel.app/">
 <meta property="og:locale" content="pt_BR">
@@ -24,8 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero-mob.webp" media="(max-width:760px)">
-<link rel="preload" as="image" href="assets/hero-2200.webp" media="(min-width:761px)">
+<link rel="preload" as="image" href="assets/hero2-mob.webp" media="(max-width:760px)">
+<link rel="preload" as="image" href="assets/hero2-2200.webp" media="(min-width:761px)">
 
 <!-- Cole aqui o código do Google Analytics / Tag Manager / Meta Pixel -->
 
@@ -443,6 +443,44 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
 .pequeno,.form-nota,.rodape .privacidade,.rodape .base,.nota-discreta,.cta .nota,label{font-size:.875rem}
 .fatos,.menu a:not(.btn),.ident,.rodape,.rodape h3{font-size:.9375rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* ---------- v5: botões verdes, condições, galeria real ---------- */
+:root{--wa:#25D366;--wa-hover:#3BE07A;--wa-texto:#0B2E18}
+.btn-wa{background:var(--wa);color:var(--wa-texto);box-shadow:0 12px 30px -14px rgba(37,211,102,.7)}
+.btn-wa:hover{background:var(--wa-hover);transform:translateY(-1px)}
+@media (prefers-reduced-motion:no-preference){
+  .btn-wa.wa,form .btn-wa{animation:brilhoWa 2.6s ease-in-out infinite}
+}
+@keyframes brilhoWa{
+  0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 10px 28px -12px rgba(37,211,102,.7)}
+  50%{box-shadow:0 0 0 6px rgba(37,211,102,.18),0 0 30px 4px rgba(37,211,102,.45)}
+}
+.wa-flutuante span{color:var(--wa-texto)}
+.wa-flutuante svg{color:var(--wa-texto)}
+/* condições */
+.cond-titulo{font-family:var(--sans);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ouro);margin-top:32px}
+.condicoes{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:34rem}
+.condicoes li{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid rgba(195,156,115,.38);border-radius:10px;background:rgba(34,23,15,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);font-weight:500;font-size:.98rem;line-height:1.25}
+.condicoes li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--ouro)}
+.cond-nota{margin-top:16px;font-size:.875rem;color:rgba(245,233,217,.75);max-width:34rem}
+/* galeria real */
+.galeria{background:var(--cafe)}
+.fotos-reais{list-style:none;padding:0;margin:clamp(40px,5vw,64px) 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,32px)}
+.fotos-reais img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid rgba(195,156,115,.25)}
+.fotos-reais p{margin-top:14px;font-family:var(--serif);font-size:1.2rem;color:var(--creme)}
+@media (max-width:760px){
+  .fotos-reais{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-right:calc(var(--gutter)*-1)}
+  .fotos-reais li{scroll-snap-align:start}
+  .condicoes li{font-size:.94rem;padding:11px 12px}
+}
+@media (max-width:360px){.condicoes{grid-template-columns:1fr}}
+
+/* topo: nome sem quebra e botão curto em telas médias */
+.marca span,.menu a{white-space:nowrap}
+@media (max-width:1279px){.menu .btn .full{display:none}.menu .btn .curto{display:inline}.menu{gap:24px}}
+@media (max-width:1099px){.menu a:not(.btn){display:none}}
+@media (max-width:520px){.marca span{white-space:normal;font-size:1.1rem;line-height:1.05}.marca img{width:40px}.menu .btn{padding:.85em 1.05em;font-size:.875rem}.topo .wrap{gap:12px}}
+@media (max-width:360px){.marca span{display:none}}
 </style>
 </head>
 <body>
@@ -467,7 +505,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <a href="#mayara">Equipe Morello</a>
       <a href="#contato">Contato</a>
       <a href="#duvidas">Dúvidas</a>
-      <a class="btn btn-terra wa" data-origem="topo" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="full">Consultar pelo WhatsApp</span><span class="curto">WhatsApp</span></a>
+      <a class="btn btn-wa wa" data-origem="topo" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="full">Agendar avaliação pelo WhatsApp</span><span class="curto">Agendar avaliação</span></a>
     </nav>
   </div>
 </header>
@@ -475,11 +513,11 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
 <main id="inicio" tabindex="-1">
 
 <!-- 1. ABERTURA -->
-<section class="tela hero" aria-labelledby="t-hero" style="--pos:70% 40%">
+<section class="tela hero" aria-labelledby="t-hero" style="--pos:72% 35%">
   <picture class="bg">
-    <source media="(max-width:760px)" srcset="assets/hero-mob.webp">
-    <source srcset="assets/hero-1280.webp 1280w, assets/hero-2200.webp 2200w" sizes="100vw">
-    <img src="assets/hero-2200.webp" alt="Senhora idosa sorrindo, sentada à mesa de casa, com a lembrança de um passeio ao pôr do sol" width="2200" height="1228" fetchpriority="high">
+    <source media="(max-width:760px)" srcset="assets/hero2-mob.webp">
+    <source srcset="assets/hero2-1280.webp 1280w, assets/hero2-2200.webp 2200w" sizes="100vw">
+    <img src="assets/hero2-2200.webp" alt="Mayara Morello abraçada a uma paciente idosa na sala de casa, iluminada pelo sol da tarde" width="2200" height="1228" fetchpriority="high">
   </picture>
   <svg class="fio" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
     <defs>
@@ -498,7 +536,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
     <h1 id="t-hero" class="h2 entra">Seu familiar precisa de fisioterapia? <span class="ouro">O cuidado pode começar em casa.</span></h1>
     <p class="apoio-txt entra d2">Atendimento para idosos e pessoas em reabilitação pós&#8209;AVC, com avaliação individual e um plano de cuidado pensado para suas necessidades, sem deslocamento até uma clínica.</p>
     <div class="cta entra d3">
-      <a class="btn btn-terra wa" data-origem="hero" data-msg="disponibilidade" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar disponibilidade pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="hero" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       <a class="link" href="#atendimento">Conhecer o atendimento</a>
     </div>
     <ul class="fatos entra d4">
@@ -521,22 +559,23 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <p class="olho">Para quem busca cuidado em casa</p>
       <h2 id="t-quem" class="h2">Fisioterapia para idosos: quando os movimentos do dia a dia <span class="ouro">precisam de mais cuidado.</span></h2>
       <p class="apoio-txt">Levantar da cadeira, caminhar pela casa ou retomar atividades após um AVC pode trazer desafios para seu familiar. A fisioterapia domiciliar oferece acompanhamento individual, considerando suas necessidades e sua rotina, no conforto de casa.</p>
-      <div class="servicos">
-        <div class="servico">
-          <h3 class="item-t">Fisioterapia para idosos</h3>
-          <p>Atenção à força, ao equilíbrio e à mobilidade, com exercícios orientados conforme a avaliação e as dificuldades nas atividades do dia a dia.</p>
-        </div>
-        <div class="servico">
-          <h3 class="item-t">Reabilitação pós-AVC</h3>
-          <p>Cuidado para trabalhar os movimentos e as atividades da rotina, respeitando a fase de recuperação e as necessidades de cada pessoa.</p>
-        </div>
-        <div class="servico">
-          <h3 class="item-t">Atendimento sem sair de casa</h3>
-          <p>Quando o deslocamento é difícil, o cuidado vai até seu familiar. O atendimento na residência permite considerar o ambiente em que ele vive e os desafios da sua rotina.</p>
-        </div>
-      </div>
+      <h3 class="cond-titulo">O que atendemos</h3>
+      <ul class="condicoes">
+        <li>AVC</li>
+        <li>Quedas</li>
+        <li>Fratura de fêmur</li>
+        <li>Prótese de quadril</li>
+        <li>Prótese de joelho</li>
+        <li>Parkinson</li>
+        <li>Alzheimer</li>
+        <li>Perda de força</li>
+        <li>Pós-internação</li>
+        <li>Artrose</li>
+        <li>Paciente acamado</li>
+      </ul>
+      <p class="cond-nota">Não encontrou a condição do seu familiar? Conte pelo WhatsApp que a equipe orienta.</p>
       <div class="cta">
-        <a class="btn btn-terra wa" data-origem="para-quem" data-msg="familiar" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar atendimento para meu familiar</a>
+        <a class="btn btn-wa wa" data-origem="para-quem" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
   </div>
@@ -560,8 +599,8 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   <div class="wrap">
     <div class="colunas">
       <div class="coluna">
-        <h3 class="item-t">Atendimento na residência</h3>
-        <p>Sem precisar organizar o deslocamento até uma clínica para cada sessão.</p>
+        <h3 class="item-t">Atendimento sem sair de casa</h3>
+        <p>Quando o deslocamento é difícil, o cuidado vai até seu familiar, sem precisar organizar idas à clínica a cada sessão.</p>
       </div>
       <div class="coluna">
         <h3 class="item-t">Avaliação no ambiente real</h3>
@@ -573,7 +612,35 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       </div>
     </div>
     <div class="cta">
-      <a class="btn btn-terra wa" data-origem="em-casa" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar atendimento em casa</a>
+      <a class="btn btn-wa wa" data-origem="em-casa" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3B. ATENDIMENTO REAL -->
+<section class="sec galeria" id="atendimento-real" aria-labelledby="t-real">
+  <div class="wrap">
+    <div class="cab surge">
+      <p class="olho">Atendimento real em domicílio</p>
+      <h2 id="t-real" class="h2">Assim é uma sessão <span class="ouro">na casa do paciente.</span></h2>
+      <p class="apoio-txt">Exercícios adaptados à rotina e ao espaço da casa, com acompanhamento de perto durante toda a sessão.</p>
+    </div>
+    <ul class="fotos-reais">
+      <li>
+        <img src="assets/real-halteres-900.webp" srcset="assets/real-halteres-600.webp 600w, assets/real-halteres-900.webp 900w" sizes="(max-width:760px) 88vw, 33vw" alt="Mayara Morello orientando uma paciente idosa em exercício de força com halteres no sofá de casa" width="900" height="1205" loading="lazy">
+        <p>Fortalecimento dos braços</p>
+      </li>
+      <li>
+        <img src="assets/real-bola-900.webp" srcset="assets/real-bola-600.webp 600w, assets/real-bola-900.webp 900w" sizes="(max-width:760px) 88vw, 33vw" alt="Paciente idosa elevando uma bola acima da cabeça com apoio da fisioterapeuta" width="900" height="1205" loading="lazy">
+        <p>Mobilidade de ombros e alongamento</p>
+      </li>
+      <li>
+        <img src="assets/real-pilates-900.webp" srcset="assets/real-pilates-600.webp 600w, assets/real-pilates-900.webp 900w" sizes="(max-width:760px) 88vw, 33vw" alt="Paciente idosa apoiando as mãos em uma bola de pilates enquanto a fisioterapeuta orienta a postura" width="900" height="1205" loading="lazy">
+        <p>Equilíbrio e controle do tronco</p>
+      </li>
+    </ul>
+    <div class="cta">
+      <a class="btn btn-wa wa" data-origem="atendimento-real" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
     </div>
   </div>
 </section>
@@ -599,7 +666,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <li><span>Visitas domiciliares em Cascavel&#8288;–&#8288;PR.</span></li>
       </ul>
       <div class="cta">
-        <a class="btn btn-terra wa" data-origem="mayara" data-msg="avaliacao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar com a equipe sobre a avaliação</a>
+        <a class="btn btn-wa wa" data-origem="mayara" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
         <a class="link" href="https://instagram.com/equipemorello" target="_blank" rel="noopener">Conhecer o perfil da Equipe Morello no Instagram</a>
       </div>
     </div>
@@ -621,22 +688,27 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <ol class="passos-v">
         <li>
           <span class="num" aria-hidden="true">1</span>
-          <h3 class="item-t">Conte para quem seria o atendimento</h3>
-          <p>Envie uma mensagem pelo WhatsApp e informe o bairro em Cascavel.</p>
+          <h3 class="item-t">Chame no WhatsApp</h3>
+          <p>Conte para quem é o atendimento e em qual bairro de Cascavel ele mora.</p>
         </li>
         <li>
           <span class="num" aria-hidden="true">2</span>
-          <h3 class="item-t">Esclareça dúvidas e consulte horários</h3>
-          <p>Converse com a equipe sobre a primeira avaliação, os valores e a disponibilidade.</p>
+          <h3 class="item-t">Tire suas dúvidas</h3>
+          <p>Veja os horários disponíveis e os valores com a equipe.</p>
         </li>
         <li>
           <span class="num" aria-hidden="true">3</span>
-          <h3 class="item-t">Planeje os próximos passos</h3>
-          <p>Após a avaliação, são discutidos os objetivos e o acompanhamento indicado para as necessidades identificadas.</p>
+          <h3 class="item-t">Agende a avaliação</h3>
+          <p>Escolha o melhor dia e horário, de segunda a sexta.</p>
+        </li>
+        <li>
+          <span class="num" aria-hidden="true">4</span>
+          <h3 class="item-t">Avaliação em casa</h3>
+          <p>A Mayara vai até a residência, avalia seu familiar e apresenta o plano de acompanhamento.</p>
         </li>
       </ol>
       <div class="cta">
-        <a class="btn btn-terra wa" data-origem="como-funciona" data-msg="disponibilidade" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar disponibilidade para avaliação</a>
+        <a class="btn btn-wa wa" data-origem="como-funciona" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
       <p class="pequeno">O agendamento é confirmado durante a conversa com a equipe.</p>
     </div>
@@ -656,7 +728,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <li><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp: (45) 99852-0799.</span></li>
       </ul>
       <div class="cta">
-        <a class="btn btn-terra wa" data-origem="contato" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="contato" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
     <div class="form-alt">
@@ -688,7 +760,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
           </select>
         </div>
         <p class="erro" id="f-erro" role="alert">Preencha seu nome e o bairro para continuar.</p>
-        <button class="btn btn-terra" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Continuar no WhatsApp</button>
+        <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</button>
         <p class="form-nota">O formulário prepara uma mensagem. Você ainda precisa enviá-la pelo WhatsApp; o agendamento depende de confirmação da equipe.</p>
         <p class="form-nota">As informações não ficam salvas pelo formulário no site. Evite incluir diagnósticos, exames ou outros dados de saúde neste primeiro contato.</p>
       </form>
@@ -709,7 +781,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <h2 id="t-final" class="h2">Vamos conversar sobre o cuidado <span class="ouro">de quem você ama.</span></h2>
       <p class="apoio-txt">Consulte a disponibilidade para fisioterapia domiciliar em Cascavel e entenda como começar com uma avaliação individual.</p>
       <div class="cta">
-        <a class="btn btn-terra wa" data-origem="final" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Conversar com a Equipe Morello</a>
+        <a class="btn btn-wa wa" data-origem="final" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
       <p class="pequeno">Segunda a sexta, das 9h às 18h · Atendimento mediante agendamento.</p>
     </div>
@@ -750,7 +822,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <p>Converse com a equipe antes de providenciar materiais. As orientações sobre o que poderá ser necessário dependem do atendimento indicado.</p>
       </details>
       <div class="cta faq-cta">
-        <a class="btn btn-terra wa" data-origem="faq" data-msg="duvida" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Esclarecer uma dúvida pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="faq" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
   </div>
@@ -769,7 +841,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
     <div class="rodape-topo">
       <img class="logo" src="assets/logo-claro.png" alt="Equipe Morello, Fisioterapia Domiciliar" width="406" height="403" loading="lazy">
       <p class="rodape-frase">Cuidado que vai além do corpo.</p>
-      <a class="btn btn-terra wa" data-origem="rodape-botao" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Falar pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="rodape-botao" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
     </div>
     <div class="grade">
       <div>
@@ -809,15 +881,15 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   </div>
 </footer>
 
-<a class="wa-flutuante wa" data-origem="flutuante" data-msg="padrao" href="#" aria-label="Conversar no WhatsApp">
-  <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Consultar pelo WhatsApp</span>
+<a class="wa-flutuante wa" data-origem="flutuante" data-msg="padrao" href="#" aria-label="Agendar avaliação pelo WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar avaliação pelo WhatsApp</span>
 </a>
 
 <script>
 (function(){
   var NUMERO = '5545998520799';
   var MSGS = {
-    padrao: 'Olá, vim pelo site e gostaria de consultar o atendimento de fisioterapia domiciliar em Cascavel.',
+    padrao: 'Olá, vim pelo site e gostaria de agendar uma avaliação de fisioterapia domiciliar em Cascavel.',
     disponibilidade: 'Olá, vim pelo site e gostaria de consultar a disponibilidade para uma avaliação domiciliar em Cascavel.',
     duvida: 'Olá, vim pelo site da Equipe Morello e tenho uma dúvida sobre o atendimento domiciliar.',
     familiar: 'Olá, vim pelo site e gostaria de conversar sobre o atendimento de fisioterapia domiciliar para meu familiar em Cascavel.',
@@ -855,7 +927,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
     }
     erro.style.display = 'none';
     var linhas = [
-      'Olá, vim pelo site e gostaria de consultar o atendimento domiciliar em Cascavel.',
+      'Olá, vim pelo site e gostaria de agendar uma avaliação de fisioterapia domiciliar em Cascavel.',
       '',
       '*Nome:* ' + v('nome'),
       '*Bairro:* ' + v('bairro'),
