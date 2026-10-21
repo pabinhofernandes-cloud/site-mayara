@@ -504,6 +504,10 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   html.anim .passos-v .num{transition:background-color .5s ease,color .5s ease,box-shadow .5s ease;transition-delay:calc(.3s + var(--i) * .4s)}
   html.anim .passos-v.vis .num{background:var(--ouro);color:var(--cafe);box-shadow:0 0 0 6px rgba(195,156,115,.18)}
 }
+
+.cta .link-insta{display:inline-flex;align-items:center;gap:10px}
+.cta .link-insta svg{width:26px;height:26px;flex:none;color:var(--ouro);transition:transform .2s,color .2s}
+.link-insta:hover svg{color:var(--ouro-claro);transform:scale(1.1)}
 </style>
 </head>
 <body>
@@ -516,6 +520,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
   <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.6-7 10-3.8-1.4-7-5-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
   <symbol id="i-casa" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
 </svg>
 
 <header class="topo" id="topo">
@@ -691,7 +696,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       </ul>
       <div class="cta">
         <a class="btn btn-wa wa" data-origem="mayara" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
-        <a class="link" href="https://instagram.com/equipemorello" target="_blank" rel="noopener">Conhecer o perfil da Equipe Morello no Instagram</a>
+        <a class="link link-insta" href="https://instagram.com/equipemorello" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Conhecer o perfil da Equipe Morello no Instagram</a>
       </div>
     </div>
   </div>
