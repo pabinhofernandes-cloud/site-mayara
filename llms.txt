@@ -9,7 +9,8 @@
 - Horário: segunda a sexta, das 9h às 18h, com visitas agendadas conforme disponibilidade.
 - Valores e formas de pagamento: informados pelo WhatsApp antes de agendar.
 
-## Contato
-- Site: https://site-mayara-mu.vercel.app/
-- WhatsApp: +55 45 99852-0799 (https://wa.me/5545998520799)
-- Instagram: https://instagram.com/equipemorello
+## Links
+- [Site da Equipe Morello](https://site-mayara-mu.vercel.app/): página principal com serviços, avaliações, etapas do atendimento e perguntas frequentes
+- [Perguntas frequentes](https://site-mayara-mu.vercel.app/#duvidas): onde atendem, primeira avaliação, AVC, horários, valores e equipamentos
+- [Agendar pelo WhatsApp](https://wa.me/5545998520799): contato direto, (45) 99852-0799
+- [Instagram @equipemorello](https://instagram.com/equipemorello): dia a dia dos atendimentos e orientações
