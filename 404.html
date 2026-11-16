@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página não encontrada | Equipe Morello</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root { --cafe:#22170F; --creme:#F5E9D9; --ouro:#C39C73; --ouro-claro:#E2C29C; --wa:#25D366; --wa-texto:#0B2E18; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 32px 20px;
+    background: var(--cafe); color: var(--creme); text-align: center;
+    font: 400 1.0625rem/1.6 "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 34rem; }
+  img { width: 120px; height: auto; margin: 0 auto 28px; display: block; }
+  .tag { color: var(--ouro); font-weight: 600; font-size: .8125rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font: 400 clamp(2rem, 6vw, 3rem)/1.1 "Fraunces", Georgia, serif; margin-bottom: 16px; }
+  h1 em { color: var(--ouro-claro); }
+  p { color: rgba(245, 233, 217, .82); margin-bottom: 32px; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  a.btn {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px;
+    border-radius: 999px; font-weight: 600; text-decoration: none;
+  }
+  .btn-wa { background: var(--wa); color: var(--wa-texto); }
+  .btn-volta { border: 1px solid rgba(226, 194, 156, .5); color: var(--creme); }
+  a.btn:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/assets/logo-claro.png" alt="Equipe Morello, Fisioterapia Domiciliar" width="406" height="403">
+  <p class="tag">Erro 404</p>
+  <h1>Esta página <em>não foi encontrada.</em></h1>
+  <p>O endereço pode ter mudado ou não existe mais. Volte para o início ou fale com a equipe pelo WhatsApp.</p>
+  <div class="acoes">
+    <a class="btn btn-wa" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn btn-volta" href="/">Voltar ao início</a>
+  </div>
+</main>
+</body>
+</html>

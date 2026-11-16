@@ -1,0 +1,15 @@
+# Equipe Morello — Fisioterapia Domiciliar em Cascavel (PR)
+
+> Fisioterapia domiciliar para idosos e reabilitação pós-AVC em Cascavel, Paraná. Responsável: Mayara Morello, fisioterapeuta, CREFITO 223762-F.
+
+## Serviço
+- Atendimento exclusivamente domiciliar, em Cascavel-PR.
+- Público: pessoas idosas e pessoas em reabilitação (pós-AVC, entre outras condições avaliadas individualmente).
+- Primeira etapa: avaliação na residência; o plano é definido a partir dela.
+- Horário: segunda a sexta, das 9h às 18h, com visitas agendadas conforme disponibilidade.
+- Valores e formas de pagamento: informados pelo WhatsApp antes de agendar.
+
+## Contato
+- Site: https://site-mayara-mu.vercel.app/
+- WhatsApp: +55 45 99852-0799 (https://wa.me/5545998520799)
+- Instagram: https://instagram.com/equipemorello

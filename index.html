@@ -24,8 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero2-mob.webp" media="(max-width:760px)">
-<link rel="preload" as="image" href="assets/hero2-2200.webp" media="(min-width:761px)">
+<link rel="preload" as="image" fetchpriority="high" href="assets/hero2-mob.webp" media="(max-width:760px)">
+<link rel="preload" as="image" fetchpriority="high" href="assets/hero2-2200.webp" imagesrcset="assets/hero2-1280.webp 1280w, assets/hero2-2200.webp 2200w" imagesizes="100vw" media="(min-width:761px)">
 
 <!-- Cole aqui o código do Google Analytics / Tag Manager / Meta Pixel -->
 
@@ -42,8 +42,64 @@
   "areaServed": {"@type": "City", "name": "Cascavel", "containedInPlace": {"@type": "State", "name": "Paraná"}},
   "address": {"@type": "PostalAddress", "addressLocality": "Cascavel", "addressRegion": "PR", "addressCountry": "BR"},
   "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"}],
-  "sameAs": ["https://instagram.com/equipemorello"],
+  "sameAs": ["https://instagram.com/equipemorello", "https://share.google/gx3OFVS3pAPwNzQ6S"],
   "founder": {"@type": "Person", "name": "Mayara Morello", "jobTitle": "Fisioterapeuta"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Onde vocês atendem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O atendimento é domiciliar e realizado exclusivamente em Cascavel, Paraná. Informe seu bairro para consultar a disponibilidade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a primeira avaliação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A avaliação acontece na residência e busca compreender as necessidades da pessoa. A partir dela, são discutidos os objetivos e o planejamento do acompanhamento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês atendem pessoas que tiveram AVC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A reabilitação pós-AVC faz parte das áreas de atendimento da Equipe Morello. As condutas são orientadas pela avaliação individual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais são os dias e horários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De segunda a sexta-feira, das 9h às 18h. As visitas são agendadas conforme a disponibilidade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como consultar valores e formas de pagamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre em contato pelo WhatsApp para receber as informações e esclarecer dúvidas antes de agendar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso ter equipamentos em casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Converse com a equipe antes de providenciar materiais. As orientações sobre o que poderá ser necessário dependem do atendimento indicado."
+      }
+    }
+  ]
 }
 </script>
 
@@ -219,7 +275,7 @@ details p{padding:0 50px 24px 0;color:var(--texto-suave);max-width:40rem}
 .rodape{background:var(--cafe);color:rgba(245,233,217,.8);padding:clamp(64px,8vw,100px) 0 40px;font-size:.95rem}
 .rodape .grade{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:48px;align-items:start}
 .rodape .logo{width:170px}
-.rodape h3{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--ouro);margin-bottom:14px}
+.rodape .rodape-tit{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--ouro);margin-bottom:14px}
 .rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .rodape a{text-decoration:none}
 .rodape a:hover{color:var(--ouro-claro)}
@@ -441,7 +497,7 @@ input::placeholder,textarea::placeholder{color:rgba(245,233,217,.6)}
 input[aria-invalid="true"]{border-color:#F0B48A!important}
 /* escala de texto pequeno unificada (2 tamanhos) */
 .pequeno,.form-nota,.rodape .privacidade,.rodape .base,.nota-discreta,.cta .nota,label{font-size:.875rem}
-.fatos,.menu a:not(.btn),.ident,.rodape,.rodape h3{font-size:.9375rem}
+.fatos,.menu a:not(.btn),.ident,.rodape,.rodape .rodape-tit{font-size:.9375rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 /* ---------- v5: botões verdes, condições, galeria real ---------- */
@@ -601,7 +657,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <a href="#mayara">Equipe Morello</a>
       <a href="#contato">Contato</a>
       <a href="#duvidas">Dúvidas</a>
-      <a class="btn btn-wa wa" data-origem="topo" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="full">Agendar avaliação pelo WhatsApp</span><span class="curto">Agendar avaliação</span></a>
+      <a class="btn btn-wa wa" data-origem="topo" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="full">Agendar avaliação pelo WhatsApp</span><span class="curto">Agendar avaliação</span></a>
     </nav>
   </div>
 </header>
@@ -632,7 +688,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
     <h1 id="t-hero" class="h2 entra">Seu familiar precisa de fisioterapia? <span class="ouro">O cuidado pode começar em casa.</span></h1>
     <p class="apoio-txt entra d2">Atendimento para idosos e pessoas em reabilitação pós&#8209;AVC, com avaliação individual e um plano de cuidado pensado para suas necessidades, sem deslocamento até uma clínica.</p>
     <div class="cta entra d3">
-      <a class="btn btn-wa wa" data-origem="hero" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="hero" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       <a class="link" href="#atendimento">Conhecer o atendimento</a>
     </div>
     <ul class="fatos entra d4">
@@ -671,7 +727,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       </ul>
       <p class="cond-nota">Não encontrou a condição do seu familiar? Conte pelo WhatsApp que a equipe orienta.</p>
       <div class="cta">
-        <a class="btn btn-wa wa" data-origem="para-quem" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="para-quem" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
   </div>
@@ -708,7 +764,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       </div>
     </div>
     <div class="cta">
-      <a class="btn btn-wa wa" data-origem="em-casa" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="em-casa" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
     </div>
   </div>
 </section>
@@ -736,7 +792,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       </li>
     </ul>
     <div class="cta">
-      <a class="btn btn-wa wa" data-origem="atendimento-real" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="atendimento-real" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
     </div>
   </div>
 </section>
@@ -759,7 +815,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   </div>
   <div class="wrap">
     <div class="cta">
-      <a class="btn btn-wa wa" data-origem="avaliacoes" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="avaliacoes" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       <a class="link" href="https://share.google/gx3OFVS3pAPwNzQ6S" target="_blank" rel="noopener">Ver todas as avaliações no Google</a>
     </div>
   </div>
@@ -786,7 +842,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <li><span>Atendimento domiciliar: conforto, comodidade e cuidado técnico sem precisar sair de casa (Cascavel&#8288;–&#8288;PR).</span></li>
       </ul>
       <div class="cta">
-        <a class="btn btn-wa wa" data-origem="mayara" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="mayara" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
         <a class="link link-insta" href="https://instagram.com/equipemorello" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Conhecer o perfil da Equipe Morello no Instagram</a>
       </div>
     </div>
@@ -828,7 +884,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         </li>
       </ol>
       <div class="cta">
-        <a class="btn btn-wa wa" data-origem="como-funciona" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="como-funciona" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
       <p class="pequeno">O agendamento é confirmado durante a conversa com a equipe.</p>
     </div>
@@ -848,7 +904,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <li><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp: (45) 99852-0799.</span></li>
       </ul>
       <div class="cta">
-        <a class="btn btn-wa wa" data-origem="contato" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="contato" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
     <div class="form-alt">
@@ -901,7 +957,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
       <h2 id="t-final" class="h2">Vamos conversar sobre o cuidado <span class="ouro">de quem você ama.</span></h2>
       <p class="apoio-txt">Consulte a disponibilidade para fisioterapia domiciliar em Cascavel e entenda como começar com uma avaliação individual.</p>
       <div class="cta">
-        <a class="btn btn-wa wa" data-origem="final" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="final" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
       <p class="pequeno">Segunda a sexta, das 9h às 18h · Atendimento mediante agendamento.</p>
     </div>
@@ -942,7 +998,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         <p>Converse com a equipe antes de providenciar materiais. As orientações sobre o que poderá ser necessário dependem do atendimento indicado.</p>
       </details>
       <div class="cta faq-cta">
-        <a class="btn btn-wa wa" data-origem="faq" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+        <a class="btn btn-wa wa" data-origem="faq" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
       </div>
     </div>
   </div>
@@ -984,15 +1040,15 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
     <div class="rodape-topo">
       <img class="logo" src="assets/logo-claro.png" alt="Equipe Morello, Fisioterapia Domiciliar" width="406" height="403" loading="lazy">
       <p class="rodape-frase">Cuidado que vai além do corpo.</p>
-      <a class="btn btn-wa wa" data-origem="rodape-botao" data-msg="padrao" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+      <a class="btn btn-wa wa" data-origem="rodape-botao" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
     </div>
     <div class="grade">
       <div>
-        <h3>Equipe Morello</h3>
+        <p class="rodape-tit">Equipe Morello</p>
         <p>Fisioterapia domiciliar para idosos e pessoas em reabilitação pós-AVC em Cascavel&#8288;–&#8288;PR.</p>
       </div>
       <div>
-        <h3>Navegação</h3>
+        <p class="rodape-tit">Navegação</p>
         <ul>
           <li><a href="#atendimento">Atendimento</a></li>
           <li><a href="#mayara">Equipe Morello</a></li>
@@ -1002,16 +1058,16 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
         </ul>
       </div>
       <div>
-        <h3>Identificação</h3>
+        <p class="rodape-tit">Identificação</p>
         <ul>
           <li>Mayara Morello · Fisioterapeuta</li>
           <li>CREFITO 223762-F</li>
         </ul>
       </div>
       <div>
-        <h3>Contato e horários</h3>
+        <p class="rodape-tit">Contato e horários</p>
         <ul>
-          <li><a class="wa" data-origem="rodape" data-msg="padrao" href="#">WhatsApp: (45) 99852-0799</a></li>
+          <li><a class="wa" data-origem="rodape" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener">WhatsApp: (45) 99852-0799</a></li>
           <li><a href="https://instagram.com/equipemorello" target="_blank" rel="noopener">Instagram: @equipemorello</a></li>
           <li>Segunda a sexta, das 9h às 18h.</li>
         </ul>
@@ -1025,7 +1081,7 @@ input[aria-invalid="true"]{border-color:#F0B48A!important}
   </div>
 </footer>
 
-<a class="wa-flutuante wa" data-origem="flutuante" data-msg="padrao" href="#" aria-label="Agendar avaliação pelo WhatsApp">
+<a class="wa-flutuante wa" data-origem="flutuante" data-msg="padrao" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20fisioterapia%20domiciliar%20em%20Cascavel." target="_blank" rel="noopener" aria-label="Agendar avaliação pelo WhatsApp">
   <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar avaliação pelo WhatsApp</span>
 </a>
 
