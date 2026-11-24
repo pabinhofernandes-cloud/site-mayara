@@ -44,6 +44,7 @@
     position:relative; width:100%; aspect-ratio:600/691; border-radius:24px; overflow:hidden;
     box-shadow:0 24px 60px -20px rgba(0,0,0,.7), 0 0 0 1px var(--linha);
   }
+  .capa picture{display:block; width:100%; height:100%}
   .capa img.foto{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block}
   .capa::after{
     content:""; position:absolute; inset:0; pointer-events:none;
@@ -154,8 +155,11 @@
 <main>
   <div class="capa">
     <img class="marca" src="/assets/marca-claro-140.webp" alt="Equipe Morello" width="70" height="46">
-    <img class="foto" src="mayara-600.webp" srcset="mayara-600.webp 600w, mayara-1000.webp 1000w" sizes="(max-width:440px) 92vw, 400px"
-         alt="Mayara Morello, fisioterapeuta, sentada em uma poltrona, de jaleco branco" width="600" height="691" fetchpriority="high">
+    <picture>
+      <source type="image/webp" srcset="mayara-600.webp 600w, mayara-1000.webp 1000w" sizes="(max-width:440px) 92vw, 400px">
+      <img class="foto" src="mayara-600.jpg" srcset="mayara-600.jpg 600w, mayara-1000.jpg 1000w" sizes="(max-width:440px) 92vw, 400px"
+           alt="Mayara Morello, fisioterapeuta, sentada em uma poltrona, de jaleco branco" width="600" height="691" fetchpriority="high">
+    </picture>
   </div>
 
   <h1>Mayara <em>Morello</em></h1>
