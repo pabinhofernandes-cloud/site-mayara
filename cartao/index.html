@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mayara Morello · Fisioterapeuta · Cartão digital</title>
+<meta name="description" content="Cartão digital de Mayara Morello, fisioterapeuta da Equipe Morello. Fisioterapia domiciliar para idosos e reabilitação pós-AVC em Cascavel–PR.">
+<meta name="theme-color" content="#22170F">
+<link rel="canonical" href="https://equipemorello.vercel.app/cartao/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mayara Morello · Fisioterapeuta">
+<meta property="og:description" content="Fisioterapia domiciliar em Cascavel–PR. Salve meu contato ou chame no WhatsApp.">
+<meta property="og:image" content="https://equipemorello.vercel.app/cartao/mayara-1000.webp">
+<meta property="og:url" content="https://equipemorello.vercel.app/cartao/">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cafe:#22170F; --cacau:#2E2017; --ouro:#C39C73; --ouro-claro:#E2C29C;
+    --creme:#F5E9D9; --creme-suave:rgba(245,233,217,.72); --linha:rgba(226,194,156,.18);
+    --wa:#25D366; --wa-texto:#0B2E18;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{background:var(--cafe);-webkit-text-size-adjust:100%}
+  body{
+    min-height:100svh; color:var(--creme); font:400 16px/1.5 Barlow,system-ui,sans-serif;
+    background:
+      radial-gradient(120% 60% at 50% 0%, rgba(195,156,115,.20), transparent 60%),
+      var(--cafe);
+    display:flex; justify-content:center;
+    padding:max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+  }
+  main{width:100%; max-width:400px; display:flex; flex-direction:column; align-items:center; text-align:center}
+
+  .capa{
+    position:relative; width:100%; aspect-ratio:600/691; border-radius:24px; overflow:hidden;
+    box-shadow:0 24px 60px -20px rgba(0,0,0,.7), 0 0 0 1px var(--linha);
+  }
+  .capa img.foto{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block}
+  .capa::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(to bottom, rgba(34,23,15,.35) 0%, transparent 18%, transparent 62%, rgba(34,23,15,.85) 88%, var(--cafe) 100%);
+  }
+  .marca{position:absolute; top:18px; left:18px; z-index:1; width:40px; height:auto}
+
+  h1{font:400 38px/1.1 Fraunces,Georgia,serif; letter-spacing:-.01em; margin-top:-56px; position:relative; z-index:1; text-shadow:0 2px 16px rgba(0,0,0,.5)}
+  h1 em{font-style:italic; color:var(--ouro-claro)}
+  .cargo{margin-top:8px; font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ouro)}
+  .resumo{margin-top:14px; color:var(--creme-suave); max-width:32ch; text-wrap:balance}
+
+  .acoes{width:100%; display:grid; gap:12px; margin-top:28px}
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 20px;
+    border-radius:14px; font:600 16px/1 Barlow,sans-serif; text-decoration:none; cursor:pointer;
+    border:1px solid var(--linha); background:rgba(245,233,217,.04); color:var(--creme);
+    transition:transform .15s ease, background-color .2s ease, border-color .2s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn:active{transform:scale(.98)}
+  .btn svg{width:20px; height:20px; flex:none}
+  .btn-wa{background:var(--wa); color:var(--wa-texto); border-color:transparent}
+  .btn-salvar{background:var(--ouro-claro); color:var(--cafe); border-color:transparent}
+  .btn-google{border-color:rgba(226,194,156,.45)}
+  .btn-google svg{color:#F4B400}
+  .linha2{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  @media (hover:hover){
+    .btn:hover{border-color:rgba(226,194,156,.45); background:rgba(245,233,217,.08)}
+    .btn-wa:hover{background:#3BE07A}
+    .btn-salvar:hover{background:var(--creme)}
+  }
+  .btn:focus-visible{outline:2px solid var(--ouro-claro); outline-offset:3px}
+
+  .info{width:100%; margin-top:28px; border-top:1px solid var(--linha); padding-top:20px; display:grid; gap:12px; text-align:left}
+  .info div{display:flex; gap:12px; align-items:flex-start; color:var(--creme-suave); font-size:15px}
+  .info svg{width:18px; height:18px; flex:none; margin-top:2px; color:var(--ouro)}
+  .info strong{color:var(--creme); font-weight:500}
+
+  details{width:100%; margin-top:24px}
+  summary{list-style:none; cursor:pointer; color:var(--ouro); font-weight:600; font-size:14px; letter-spacing:.06em; text-transform:uppercase; padding:8px}
+  summary::-webkit-details-marker{display:none}
+  .qr{margin:12px auto 0; width:200px; padding:16px; background:var(--creme); border-radius:16px}
+  .qr img{display:block; width:100%}
+  .qr-txt{margin-top:10px; font-size:13px; color:var(--creme-suave)}
+
+  footer{margin-top:28px; font-size:12px; color:rgba(245,233,217,.45)}
+  footer a{color:inherit}
+
+  @media (prefers-reduced-motion:no-preference){
+    main > *{animation:sobe .6s cubic-bezier(.2,.7,.2,1) both}
+    main > *:nth-child(2){animation-delay:.05s} main > *:nth-child(3){animation-delay:.1s}
+    main > *:nth-child(4){animation-delay:.14s} main > *:nth-child(5){animation-delay:.18s}
+    main > *:nth-child(n+6){animation-delay:.22s}
+    @keyframes sobe{from{opacity:0; transform:translateY(10px)}}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.1-1.34A9.9 9.9 0 1 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.03.8.8-2.95-.2-.31a8.23 8.23 0 1 1 6.92 3.79Zm4.51-6.16c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.66.31 2.77 2.77 0 0 0-.86 2.06 4.8 4.8 0 0 0 1 2.55 11 11 0 0 0 4.22 3.73c1.57.68 2.19.74 2.98.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0M19 4v4m2-2h-4"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 15V3m0 0L8 7m4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+</svg>
+
+<main>
+  <div class="capa">
+    <img class="marca" src="/assets/marca-claro-140.webp" alt="Equipe Morello" width="70" height="46">
+    <img class="foto" src="mayara-600.webp" srcset="mayara-600.webp 600w, mayara-1000.webp 1000w" sizes="(max-width:440px) 92vw, 400px"
+         alt="Mayara Morello, fisioterapeuta, sentada em uma poltrona, de jaleco branco" width="600" height="691" fetchpriority="high">
+  </div>
+
+  <h1>Mayara <em>Morello</em></h1>
+  <p class="cargo">Fisioterapeuta · CREFITO 223762-F</p>
+  <p class="resumo">Fisioterapia domiciliar para idosos e reabilitação pós&#8209;AVC, no conforto da sua casa.</p>
+
+  <div class="acoes">
+    <a class="btn btn-wa" href="https://wa.me/5545998520799?text=Ol%C3%A1%2C%20Mayara!%20Vim%20pelo%20seu%20cart%C3%A3o%20digital%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia%20domiciliar."
+       target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+    <a class="btn btn-salvar" href="mayara-morello.vcf" download="Mayara Morello.vcf"><svg aria-hidden="true"><use href="#i-user"/></svg>Salvar contato</a>
+    <div class="linha2">
+      <a class="btn" href="https://instagram.com/equipemorello" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Instagram</a>
+      <a class="btn" href="/"><svg aria-hidden="true"><use href="#i-web"/></svg>Site</a>
+    </div>
+    <!-- Link de avaliação do Perfil da Empresa no Google -->
+    <a class="btn btn-google" id="avaliar" href="https://g.page/r/CTBlqk2tvlx8EBM/review" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-star"/></svg>Avaliar no Google</a>
+    <button class="btn" type="button" id="compartilhar"><svg aria-hidden="true"><use href="#i-share"/></svg>Compartilhar cartão</button>
+  </div>
+
+  <div class="info">
+    <div><svg aria-hidden="true"><use href="#i-phone"/></svg><span><strong>(45) 99852-0799</strong> · WhatsApp e ligação</span></div>
+    <div><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Atendimento <strong>em domicílio</strong> em Cascavel–PR</span></div>
+    <div><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Segunda a sexta, <strong>9h às 18h</strong>, com horário agendado</span></div>
+  </div>
+
+  <details>
+    <summary>Mostrar QR code</summary>
+    <div class="qr"><img src="qr.svg" alt="QR code que abre este cartão digital" width="168" height="168"></div>
+    <p class="qr-txt">Aponte a câmera do celular para abrir este cartão.</p>
+  </details>
+
+  <footer>Equipe Morello · Fisioterapia Domiciliar · <a href="/">equipemorello.vercel.app</a></footer>
+</main>
+
+<script>
+  document.getElementById('compartilhar').addEventListener('click', async (e) => {
+    const url = 'https://equipemorello.vercel.app/cartao/';
+    const dados = { title: 'Mayara Morello · Fisioterapeuta', text: 'Cartão digital da Mayara Morello, fisioterapeuta em Cascavel–PR:', url };
+    if (navigator.share) { try { await navigator.share(dados); } catch (_) {} return; }
+    try {
+      await navigator.clipboard.writeText(url);
+      const b = e.currentTarget, t = b.lastChild.textContent;
+      b.lastChild.textContent = 'Link copiado!';
+      setTimeout(() => b.lastChild.textContent = t, 2000);
+    } catch (_) { location.href = 'https://wa.me/?text=' + encodeURIComponent(dados.text + ' ' + url); }
+  });
+</script>
+</body>
+</html>
