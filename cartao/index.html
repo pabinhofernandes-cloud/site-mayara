@@ -10,7 +10,12 @@
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Mayara Morello · Fisioterapeuta">
 <meta property="og:description" content="Fisioterapia domiciliar em Cascavel–PR. Salve meu contato ou chame no WhatsApp.">
-<meta property="og:image" content="https://equipemorello.vercel.app/cartao/mayara-1000.webp">
+<meta property="og:image" content="https://equipemorello.vercel.app/cartao/og-cartao.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mayara Morello, fisioterapeuta, sentada em uma poltrona">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://equipemorello.vercel.app/cartao/">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -124,6 +129,12 @@
     main > *:nth-child(4){animation-delay:.14s} main > *:nth-child(5){animation-delay:.18s}
     main > *:nth-child(n+6){animation-delay:.22s}
     @keyframes sobe{from{opacity:0; transform:translateY(10px)}}
+  }
+  .btn{min-width:0; text-align:center}
+  @media (max-width:340px){
+    body{padding-left:12px; padding-right:12px}
+    .btn{padding:0 10px; font-size:15px; gap:8px}
+    .linha2{gap:8px}
   }
 </style>
 </head>
