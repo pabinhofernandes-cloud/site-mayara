@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://site-mayara-mu.vercel.app/sitemap.xml
+Sitemap: https://equipemorello.vercel.app/sitemap.xml
